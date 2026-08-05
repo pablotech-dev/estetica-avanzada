@@ -58,6 +58,7 @@ body {
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
     font-weight: 400;
+    color: var(--text-main); /* Asegura contraste en encabezados globales */
 }
 
 h1 { font-size: clamp(2.5rem, 5vw, 5rem); line-height: 1.1; }
@@ -95,7 +96,7 @@ em { font-style: italic; color: var(--accent-gold); }
 }
 .btn-primary {
     background-color: var(--accent-gold);
-    color: var(--bg-dark);
+    color: var(--bg-dark); /* Texto oscuro sobre oro para legibilidad */
     font-weight: 600;
 }
 .btn-primary:hover {
@@ -210,7 +211,7 @@ em { font-style: italic; color: var(--accent-gold); }
 }
 .hero-content p {
     font-size: 1.1rem;
-    color: var(--text-muted);
+    color: var(--text-muted); /* Gris claro sobre fondo oscuro, buen contraste */
     margin: 1.5rem 0 2.5rem;
 }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -236,6 +237,7 @@ em { font-style: italic; color: var(--accent-gold); }
     font-size: 0.8rem;
     display: block;
     margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 .manifesto-text p {
     color: var(--text-muted); 
@@ -339,22 +341,42 @@ em { font-style: italic; color: var(--accent-gold); }
     justify-content: flex-end;
     background: linear-gradient(to top, rgba(15,16,18,0.95) 10%, rgba(15,16,18,0.2) 100%);
 }
+
+/* Asegurar que los textos sobre imágenes de los servicios sean blancos/claros */
+.bento-content h3 { color: var(--text-main); margin-bottom: 0.5rem; }
+.bento-content p { color: var(--text-muted); font-size: 0.95rem; }
+
 .dark-card { 
     background: var(--bg-card); 
     justify-content: center; 
     border: 1px solid rgba(255,255,255,0.05);
 }
+
+/* CORRECCIÓN: Contraste en Nude Card */
 .nude-card { 
     background: var(--nude); 
     color: var(--bg-dark); 
     justify-content: center; 
 }
-.nude-card h3, .nude-card p { color: var(--bg-dark); }
+.nude-card h3, 
+.nude-card p,
+.nude-card .eyebrow,
+.nude-card .link-arrow { 
+    color: var(--bg-dark); /* Fuerza el oscuro sobre el beige claro */
+}
+.nude-card .link-arrow:hover {
+    opacity: 0.7; /* Da feedback visual al hacer hover */
+}
+
 .link-arrow {
     color: var(--accent-gold);
     text-decoration: none;
     margin-top: 1rem;
     font-weight: 600;
+    transition: var(--transition);
+}
+.link-arrow:hover {
+    color: var(--accent-gold-hover);
 }
 
 /* =========================================
@@ -565,14 +587,21 @@ em { font-style: italic; color: var(--accent-gold); }
     border-radius: var(--radius-lg); 
     border: 1px solid rgba(255,255,255,0.05); 
 }
-.contact-box h3 { font-size: 2rem; margin-bottom: 1.5rem; }
+.contact-box h3 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--text-main); }
 .contact-form { margin-top: 1.5rem; }
 .form-group { margin-bottom: 1.2rem; }
+
 .form-group input, .form-group select {
     width: 100%; padding: 1rem; background: var(--bg-card);
     border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm);
     color: var(--text-main); font-family: var(--font-body); outline: none; transition: var(--transition);
 }
+
+/* Color para el texto predictivo/placeholder de los inputs */
+.form-group input::placeholder, .form-group select::placeholder {
+    color: rgba(161, 157, 152, 0.6); /* --text-muted con opacidad */
+}
+
 .form-group input:focus, .form-group select:focus { border-color: var(--accent-gold); }
 .checkbox-group { display: flex; gap: 10px; align-items: center; margin-bottom: 1.5rem; }
 .checkbox-group input { width: auto; }
@@ -599,7 +628,7 @@ em { font-style: italic; color: var(--accent-gold); }
 }
 .cookie-banner.show { bottom: 0; }
 .cookie-content { max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
-.cookie-content p { font-size: 0.85rem; color: var(--text-muted); }
+.cookie-content p { font-size: 0.85rem; color: var(--text-main); /* Cambiado de text-muted a text-main para máxima legibilidad */ }
 .cookie-buttons { display: flex; gap: 0.8rem; }
 .small { padding: 0.5rem 1.2rem; font-size: 0.8rem; }
 
