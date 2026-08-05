@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA | Clínica de Estética Avanzada</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Promo Bar -->
+    <div class="promo-bar">
+        Descubre nuestra nueva aparatología láser. 20% de descuento en tu primera sesión de diagnóstico.
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">AURA.</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Tratamientos</a></li>
+                <li><a href="#contacto">Reserva</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Eleva la belleza natural de tu piel.</h1>
+            <p>Ciencia, tecnología y bienestar se fusionan en protocolos exclusivos diseñados a medida para ti.</p>
+            <a href="#contacto" class="btn btn-primary">Solicitar Valoración</a>
+        </div>
+    </header>
+
+    <!-- Sección Interactiva: Diagnóstico Express -->
+    <section class="interactive-diagnosis">
+        <div class="container text-center">
+            <h2>Descubre tu Tratamiento Ideal</h2>
+            <p>Selecciona qué aspecto de tu piel te gustaría mejorar hoy y nuestro algoritmo te sugerirá el protocolo perfecto.</p>
+            
+            <div class="quiz-buttons">
+                <button class="btn btn-outline quiz-btn" data-concern="luminosidad">Falta de Luminosidad</button>
+                <button class="btn btn-outline quiz-btn" data-concern="firmeza">Pérdida de Firmeza</button>
+                <button class="btn btn-outline quiz-btn" data-concern="manchas">Manchas e Hiperpigmentación</button>
+            </div>
+
+            <div id="quiz-result" class="quiz-result hidden">
+                <!-- Aquí se inyecta la respuesta con JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto / Reservas (Cumplimiento RGPD) -->
+    <section id="contacto" class="contact-section container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Comienza tu cambio hoy.</h2>
+                <p>Déjanos tus datos y una de nuestras especialistas se pondrá en contacto contigo para agendar tu diagnóstico facial o corporal con cámara de alta precisión.</p>
+                <br>
+                <p><strong>📍 Ubicación:</strong> Calle de la Belleza 123, Madrid</p>
+                <p><strong>📞 Teléfono:</strong> +34 912 345 678</p>
+            </div>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Tu Nombre Completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Correo Electrónico" required>
+                </div>
+                <div class="form-group">
+                    <select id="interest" required>
+                        <option value="" disabled selected>Selecciona un área de interés</option>
+                        <option value="facial">Medicina Estética Facial</option>
+                        <option value="corporal">Remodelación Corporal</option>
+                        <option value="depilacion">Depilación Láser</option>
+                    </select>
+                </div>
+                <!-- Checkbox RGPD -->
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="rgpd" required>
+                    <label for="rgpd">He leído y acepto la <a href="legal.html">Política de Privacidad</a> y consiento el tratamiento de mis datos.</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Solicitar Cita</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Legal -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>AURA.</h3>
+                <p>Clínica de Estética Avanzada.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="legal.html">Aviso Legal</a></li>
+                    <li><a href="legal.html">Política de Privacidad</a></li>
+                    <li><a href="legal.html">Política de Cookies</a></li>
+                    <li><a href="legal.html">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AURA Estética Avanzada. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Banner de Cookies -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Utilizamos cookies propias y de terceros para fines analíticos y para mostrarte publicidad personalizada en base a un perfil elaborado a partir de tus hábitos de navegación. <a href="legal.html">Más información</a>.</p>
+            <div class="cookie-buttons">
+                <button id="btn-config-cookies" class="btn btn-outline btn-sm">Configurar</button>
+                <button id="btn-accept-cookies" class="btn btn-primary btn-sm">Aceptar Todas</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

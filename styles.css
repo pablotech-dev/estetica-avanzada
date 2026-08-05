@@ -1,0 +1,595 @@
+/* ==========================================================================
+   Variables y Reseteo Base
+   ========================================================================== */
+:root {
+    /* Paleta 'Warm Premium' */
+    --color-bg: #FAF7F2;          /* Crema suave */
+    --color-primary: #8C5A4C;     /* Terracota */
+    --color-primary-hover: #734538;
+    --color-secondary: #D9BCA3;   /* Beige/Arena */
+    --color-text: #2C2A29;        /* Antracita oscuro para contraste legible */
+    --color-text-light: #5E5C5A;
+    --color-white: #FFFFFF;
+    
+    /* Tipografías */
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Jost', sans-serif;
+    
+    /* Efectos */
+    --shadow-soft: 0 10px 30px rgba(140, 90, 76, 0.08);
+    --shadow-hover: 0 15px 40px rgba(140, 90, 76, 0.15);
+    --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+/* ==========================================================================
+   Utilidades y Layout
+   ========================================================================== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center { text-align: center; }
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-block {
+    width: 100%;
+    text-align: center;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   Navegación y Promo Bar
+   ========================================================================== */
+.promo-bar {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    text-align: center;
+    padding: 8px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(250, 247, 242, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 20px 0;
+    transition: var(--transition);
+}
+
+.solid-nav {
+    background-color: var(--color-white);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand-logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-primary);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: var(--transition);
+}
+
+/* ==========================================================================
+   Secciones Principales (Hero, Contacto)
+   ========================================================================== */
+.hero {
+    height: 85vh;
+    background-image: linear-gradient(rgba(44, 42, 41, 0.3), rgba(44, 42, 41, 0.2)), url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    background: rgba(250, 247, 242, 0.85);
+    padding: 3rem 2rem;
+    border-radius: var(--radius);
+    max-width: 600px;
+    backdrop-filter: blur(5px);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   Diagnóstico Interactivo (Sorpresa JS)
+   ========================================================================== */
+.interactive-diagnosis {
+    padding: 6rem 0;
+    background-color: var(--color-white);
+}
+
+.interactive-diagnosis h2 {
+    font-size: 2.5rem;
+}
+
+.quiz-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.quiz-result {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: var(--color-bg);
+    border-radius: var(--radius);
+    border: 1px solid var(--color-secondary);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.quiz-result.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.quiz-result h3 {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+}
+
+/* ==========================================================================
+   Página de Servicios (Catálogo)
+   ========================================================================== */
+.page-header {
+    padding: 4rem 0 2rem;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+}
+
+.services-catalog {
+    padding: 2rem 0 6rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+.service-card {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.img-wrapper {
+    height: 250px;
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.service-card:hover .img-wrapper img {
+    transform: scale(1.05);
+}
+
+.service-content {
+    padding: 2rem;
+}
+
+.service-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.price {
+    font-weight: 500;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+}
+
+.link-arrow {
+    font-family: var(--font-heading);
+    font-style: italic;
+    color: var(--color-text);
+}
+
+.link-arrow:hover {
+    color: var(--color-primary);
+    padding-left: 5px;
+}
+
+/* ==========================================================================
+   Formulario de Contacto
+   ========================================================================== */
+.contact-section {
+    padding: 6rem 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    background: var(--color-white);
+    padding: 4rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--color-secondary);
+    background-color: var(--color-bg);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(140, 90, 76, 0.1);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-top: 4px;
+}
+
+.checkbox-group a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Página Legal
+   ========================================================================== */
+.legal-container {
+    padding: 4rem 0 6rem;
+    max-width: 800px;
+}
+
+.legal-container h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.last-updated {
+    font-style: italic;
+    color: var(--color-text-light);
+    margin-bottom: 3rem;
+}
+
+.legal-text h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: var(--color-text);
+}
+
+.legal-text p, .legal-text ul {
+    margin-bottom: 1rem;
+    color: var(--color-text-light);
+}
+
+.legal-text ul {
+    padding-left: 20px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand h3 {
+    color: var(--color-secondary);
+    font-size: 2rem;
+}
+
+.footer-links h4 {
+    color: var(--color-secondary);
+    font-size: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a:hover {
+    color: var(--color-secondary);
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* ==========================================================================
+   Banner de Cookies (Flotante y Adaptado a la Estética)
+   ========================================================================== */
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
+    background-color: var(--color-white);
+    padding: 20px 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-left: 4px solid var(--color-primary);
+}
+
+.cookie-banner.hidden {
+    display: none;
+}
+
+.cookie-content p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: var(--color-text-light);
+}
+
+.cookie-content a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        background-color: var(--color-white);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+        transition: left 0.3s ease;
+    }
+
+    .nav-links.nav-active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    
+    .hamburger.toggle span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .hamburger.toggle span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.toggle span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+    
+    .cookie-banner {
+        bottom: 0;
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+    }
+    
+    .cookie-buttons {
+        justify-content: stretch;
+    }
+    
+    .cookie-buttons .btn {
+        flex: 1;
+    }
+}
