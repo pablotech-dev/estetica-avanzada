@@ -454,3 +454,171 @@ em { font-style: italic; color: var(--accent-gold); }
     .nav-links.active { right: 0; }
     .hamburger { display: block; }
 }
+
+/* Utilidad de accesibilidad para labels ocultos visualmente */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Tratamiento Estrella */
+.featured-treatment {
+    padding: 80px 5%;
+    background-color: #fcfbf9;
+}
+.featured-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+.featured-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.badge-featured {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+.featured-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 30px;
+}
+.featured-benefits li {
+    margin-bottom: 10px;
+    color: #4a4a4a;
+}
+
+/* Testimonios */
+.testimonials {
+    padding: 80px 5%;
+    background: #fff;
+}
+.google-rating {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+.google-rating .stars {
+    color: #e6a15c;
+    margin-right: 6px;
+}
+.testimonials-grid {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.testimonial-card {
+    background: #f9f8f6;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.quote-stars {
+    color: #e6a15c;
+    margin-bottom: 12px;
+}
+.author-info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+
+/* Equipo Médico */
+.team-section {
+    padding: 80px 5%;
+    background-color: #fcfbf9;
+}
+.team-grid {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+.team-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+.team-img img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+.team-info {
+    padding: 25px;
+}
+.team-info .role {
+    display: block;
+    color: #8c8275;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Rediseño Contacto & Layout */
+.contact-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+.info-details {
+    margin-top: 30px;
+}
+.info-item {
+    margin-bottom: 20px;
+}
+.info-item strong {
+    display: block;
+    margin-bottom: 5px;
+}
+.sanitary-code {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 8px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .featured-container,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

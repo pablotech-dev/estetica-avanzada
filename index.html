@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Éternel Clinic | Estética Avanzada y Antiaging</title>
+    <title>L'Éternel Clinic | Estética Avanzada y Medicina Antiaging</title>
+    
+    <!-- SEO & Metadatos -->
+    <meta name="description" content="L'Éternel Clinic es tu centro de estética avanzada y medicina antiaging. Tratamientos faciales y corporales no invasivos con tecnología de vanguardia y resultados naturales.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://leternelclinic.com/">
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="L'Éternel Clinic | Estética Avanzada y Medicina Antiaging">
+    <meta property="og:description" content="Elevamos tu belleza a su máxima expresión mediante la ciencia y el arte. Protocolos personalizados no invasivos.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://leternelclinic.com/">
+
+    <!-- Tipografía y Estilos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -12,17 +26,19 @@
 <body>
 
     <!-- Navegación Glassmorphism -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Navegación principal">
         <div class="nav-container">
             <a href="index.html" class="logo">L'ÉTERNEL</a>
             <div class="nav-links">
                 <a href="#filosofia">Manifiesto</a>
+                <a href="#tratamiento-estrella">Destacado</a>
                 <a href="#servicios">Servicios</a>
                 <a href="#resultados">Resultados</a>
-                <a href="service.html">Tratamiento Estrella</a>
+                <a href="#equipo">Equipo</a>
+                <a href="#contacto">Contacto</a>
             </div>
             <a href="#contacto" class="btn-primary nav-cta">Reservar Cita</a>
-            <button class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
                 <span></span><span></span>
             </button>
         </div>
@@ -31,7 +47,10 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1920&q=80" alt="Mujer con piel perfecta">
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Tratamiento de piel radiante en L'Éternel Clinic" 
+                 width="1920" height="1080"
+                 loading="eager">
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content reveal slide-up">
@@ -49,12 +68,39 @@
         <div class="manifesto-grid">
             <div class="manifesto-text reveal fade-in">
                 <span class="eyebrow">Nuestro Manifiesto</span>
-                <h2>No cambiamos quién eres. <br>Revelamos tu luz.</h2>
+                <h2>No cambiamos quién eres.<br>Revelamos tu luz.</h2>
                 <p>En L'Éternel creemos que la estética avanzada no trata de ocultar, sino de potenciar. Cada rostro cuenta una historia y nuestro enfoque clínico está diseñado para que esa historia se lea con vitalidad, frescura y absoluta naturalidad.</p>
                 <p>Utilizamos aparatología de vanguardia y activos biológicos puros para devolverle a tu piel el tiempo que la ciudad y el estrés le han robado.</p>
             </div>
             <div class="manifesto-img reveal slide-up">
-                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" alt="Detalle estético">
+                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" 
+                     alt="Detalle de cuidado facial especializado" 
+                     width="800" height="1000"
+                     loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Tratamiento Estrella Destacado -->
+    <section id="tratamiento-estrella" class="featured-treatment">
+        <div class="featured-container reveal fade-in">
+            <div class="featured-image">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=80" 
+                     alt="Protocolo de regeneración con exosomas y láser" 
+                     width="1000" height="667" 
+                     loading="lazy">
+                <span class="badge-featured">Protocolo Exclusivo</span>
+            </div>
+            <div class="featured-details">
+                <span class="eyebrow">Tratamiento Estrella</span>
+                <h2>Regeneración Celular con Exosomas & Láser Fraccional</h2>
+                <p>Nuestro protocolo insignia combina la potencia del láser fotónico con la infusión de exosomas de máxima pureza para reprogramar el comportamiento celular de tu piel.</p>
+                <ul class="featured-benefits">
+                    <li>✓ Estimulación intensiva de colágeno y elastina</li>
+                    <li>✓ Reducción visible de poros, manchas y arrugas de expresión</li>
+                    <li>✓ Recuperación ultra rápida sin tiempo de baja</li>
+                </ul>
+                <a href="service.html" class="btn-primary">Ver todos los detalles ➔</a>
             </div>
         </div>
     </section>
@@ -63,31 +109,31 @@
     <section id="servicios" class="services">
         <div class="section-header reveal fade-in">
             <h2>Nuestros Protocolos</h2>
-            <p>Diseñados a medida según el lienzo de tu piel.</p>
+            <p>Diseñados a medida según el lienzo único de tu piel.</p>
         </div>
         <div class="bento-grid">
-            <div class="bento-item large reveal fade-in" style="background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80');">
+            <div class="bento-item large reveal fade-in" style="background-image: url('https://images.unsplash.com/photo-1512290900673-70020f918f1a?auto=format&fit=crop&w=800&q=80');">
                 <div class="bento-content">
                     <h3>Rejuvenecimiento Facial 360º</h3>
-                    <p>Láser fraccional y exosomas para una renovación celular profunda.</p>
+                    <p>Combinación sinérgica para renovar las capas profundas de la epidermis.</p>
                 </div>
             </div>
             <div class="bento-item reveal fade-in delay-1">
                 <div class="bento-content dark-card">
-                    <h3>Armonización</h3>
-                    <p>Ácido hialurónico dinámico para reestructurar volúmenes perdidos.</p>
+                    <h3>Armonización Facial</h3>
+                    <p>Ácido hialurónico dinámico para reestructurar volúmenes con máxima naturalidad.</p>
                 </div>
             </div>
             <div class="bento-item reveal fade-in delay-2">
                 <div class="bento-content nude-card">
                     <h3>Glow Therapy</h3>
-                    <p>Infusión vitamínica profunda para un brillo instantáneo previo a eventos.</p>
+                    <p>Infusión vitamínica profunda para un brillo e hidratación instantáneos.</p>
                 </div>
             </div>
             <div class="bento-item wide reveal fade-in">
                 <div class="bento-content image-card" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80');">
                     <h3>Remodelación Corporal Alta Gama</h3>
-                    <a href="service.html" class="link-arrow">Saber más ➝</a>
+                    <a href="service.html" class="link-arrow">Descubrir protocolo ➝</a>
                 </div>
             </div>
         </div>
@@ -97,18 +143,102 @@
     <section id="resultados" class="results">
         <div class="section-header reveal fade-in">
             <h2>Resultados Reales</h2>
-            <p>Desliza para ver la transformación (Protocolo Luminosidad).</p>
+            <p>Desliza para apreciar la transformación clínica (Protocolo Luminosidad & Textura).</p>
         </div>
         <div class="compare-wrapper reveal slide-up">
             <div class="compare-container" id="compare-container">
                 <!-- Imagen Después (Fondo) -->
-                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1000&q=80" alt="Después del tratamiento" class="img-after">
+                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1000&q=80" 
+                     alt="Piel del paciente después del tratamiento" 
+                     class="img-after" 
+                     width="1000" height="667" 
+                     loading="lazy">
                 <!-- Imagen Antes (Superpuesta con clip-path) -->
-                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80" alt="Antes del tratamiento" class="img-before" style="filter: grayscale(80%) blur(1px);">
-                <!-- Control deslizante -->
-                <input type="range" min="0" max="100" value="50" class="slider" id="compare-slider">
-                <div class="slider-line">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80" 
+                     alt="Piel del paciente antes del tratamiento" 
+                     class="img-before" 
+                     style="filter: grayscale(80%) blur(1px);" 
+                     width="1000" height="667" 
+                     loading="lazy">
+                <!-- Control deslizante accesible -->
+                <input type="range" min="0" max="100" value="50" class="slider" id="compare-slider" aria-label="Deslizador para comparar el estado antes y después del tratamiento">
+                <div class="slider-line" aria-hidden="true">
                     <div class="slider-button">↔</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Testimonios y Prueba Social -->
+    <section id="testimonios" class="testimonials">
+        <div class="section-header reveal fade-in">
+            <span class="eyebrow">Prueba Social</span>
+            <h2>La Experiencia L'Éternel</h2>
+            <div class="google-rating">
+                <span class="stars">★★★★★</span>
+                <span><strong>4.9 / 5.0</strong> en Google Reviews (+240 pacientes satisfechos)</span>
+            </div>
+        </div>
+        <div class="testimonials-grid reveal slide-up">
+            <div class="testimonial-card">
+                <div class="quote-stars">★★★★★</div>
+                <p>"El trato médico es excepcional. Buscaba un resultado muy natural para suavizar las líneas de expresión y superaron mis expectativas. La clínica impecable."</p>
+                <div class="author-info">
+                    <strong>Elena M.</strong>
+                    <span>Tratamiento de Armonización</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-stars">★★★★★</div>
+                <p>"El protocolo Glow previo a mi boda fue un acierto total. Mi piel lucía descansada, jugosa y llena de luz. Un equipo de verdaderos profesionales."</p>
+                <div class="author-info">
+                    <strong>Carmen R.</strong>
+                    <span>Glow Therapy</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-stars">★★★★★</div>
+                <p>"Aparatología de última generación y un diagnóstico muy honesto desde la primera cita gratuita. Transmiten mucha confianza."</p>
+                <div class="author-info">
+                    <strong>Javier G.</strong>
+                    <span>Rejuvenecimiento Facial 360º</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Equipo Médico e Instalaciones -->
+    <section id="equipo" class="team-section">
+        <div class="section-header reveal fade-in">
+            <span class="eyebrow">Rigor Médico</span>
+            <h2>Manos Expertas, Ciencia y Vanguardia</h2>
+            <p>Detrás de cada protocolo hay un diagnóstico personalizado y la supervisión de especialistas titulados en Medicina Estética.</p>
+        </div>
+        <div class="team-grid reveal slide-up">
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80" 
+                         alt="Dra. Sofía Valenzuela, Directora Médica" 
+                         width="600" height="750" 
+                         loading="lazy">
+                </div>
+                <div class="team-info">
+                    <h3>Dra. Sofía Valenzuela</h3>
+                    <span class="role">Directora Médica & Especialista Antiaging</span>
+                    <p>Máster en Medicina Estética y Regenerativa. Más de 12 años liderando protocolos innovadores de rejuvenecimiento natural.</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=600&q=80" 
+                         alt="Instalaciones de L'Éternel Clinic" 
+                         width="600" height="750" 
+                         loading="lazy">
+                </div>
+                <div class="team-info">
+                    <h3>Nuestra Clínica</h3>
+                    <span class="role">Un Santuario de Bienestar</span>
+                    <p>Espacios privados equipados con tecnología médica certificada por la UE para garantizar tu máxima seguridad y confort.</p>
                 </div>
             </div>
         </div>
@@ -121,46 +251,81 @@
         </div>
         <div class="faq-container reveal slide-up">
             <div class="faq-item">
-                <button class="faq-question">¿Los tratamientos son dolorosos?</button>
+                <button class="faq-question" aria-expanded="false">¿Los tratamientos son dolorosos?</button>
                 <div class="faq-answer"><p>No. Utilizamos anestesia tópica de alta penetración y tecnología de enfriamiento epidérmico para asegurar una experiencia completamente confortable.</p></div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">¿Cuánto tiempo tardaré en ver resultados?</button>
+                <button class="faq-question" aria-expanded="false">¿Cuánto tiempo tardaré en ver resultados?</button>
                 <div class="faq-answer"><p>Depende del protocolo. Las terapias de hidratación ("Glow") muestran resultados inmediatos. Los tratamientos estimuladores de colágeno alcanzan su pico entre la semana 3 y 4.</p></div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">¿Tienen efectos secundarios?</button>
-                <div class="faq-answer"><p>Nuestros procedimientos son mínimamente invasivos. Puedes experimentar un leve enrojecimiento que desaparece en unas pocas horas, permitiéndote retomar tu vida normal al instante.</p></div>
+                <button class="faq-question" aria-expanded="false">¿Tienen efectos secundarios o requieren tiempo de baja?</button>
+                <div class="faq-answer"><p>Nuestros procedimientos son mínimamente invasivos. Puedes experimentar un leve enrojecimiento pasajero que desaparece en pocas horas, permitiéndote retomar tu rutina diaria inmediatamente.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">¿Cómo funciona la primera consulta de diagnóstico?</button>
+                <div class="faq-answer"><p>Realizamos un diagnóstico dermoestético digital completo sin coste para evaluar el estado profundo de tu piel y diseñar un plan personalizado ajustado a tus necesidades.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Formulario de Contacto (GDPR) -->
+    <!-- Formulario de Contacto y Ubicación -->
     <section id="contacto" class="contact">
-        <div class="contact-box reveal fade-in">
-            <h2>Comienza tu viaje</h2>
-            <p>Reserva tu diagnóstico inicial gratuito con nuestro equipo médico.</p>
-            <form action="#" method="POST" class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" placeholder="Tu Nombre Completo" required>
+        <div class="contact-grid reveal fade-in">
+            <div class="contact-info">
+                <span class="eyebrow">Contacto y Citas</span>
+                <h2>Comienza tu viaje hacia una belleza sin edad</h2>
+                <p>Solicita tu diagnóstico médico personalizado sin compromiso. Nuestro equipo evaluará la salud de tu piel y te propondrá el tratamiento idóneo.</p>
+                
+                <div class="info-details">
+                    <div class="info-item">
+                        <strong>📍 Dirección:</strong>
+                        <p>Calle Velázquez 42, 1º Izq.<br>28001 Madrid, España</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>📞 Teléfono & WhatsApp:</strong>
+                        <p><a href="tel:+34910000000">+34 910 000 000</a></p>
+                    </div>
+                    <div class="info-item">
+                        <strong>⏰ Horario:</strong>
+                        <p>Lunes a Viernes: 10:00 - 20:00 h<br>Sábados: 10:00 - 14:00 h</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="Correo Electrónico" required>
-                </div>
-                <div class="form-group">
-                    <select id="service" required>
-                        <option value="" disabled selected>¿Qué te interesa mejorar?</option>
-                        <option value="facial">Rejuvenecimiento Facial</option>
-                        <option value="corporal">Remodelación Corporal</option>
-                        <option value="piel">Calidad de la Piel / Acné</option>
-                    </select>
-                </div>
-                <div class="form-group checkbox-group">
-                    <input type="checkbox" id="rgpd" required>
-                    <label for="rgpd">He leído y acepto la <a href="privacy.html">Política de Privacidad</a>.</label>
-                </div>
-                <button type="submit" class="btn-primary full-width">Solicitar Cita</button>
-            </form>
+            </div>
+
+            <div class="contact-box">
+                <h3>Reserva tu Cita</h3>
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="visually-hidden">Nombre completo</label>
+                        <input type="text" id="name" name="name" placeholder="Tu Nombre Completo" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="visually-hidden">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="visually-hidden">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Teléfono de Contacto" autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="service" class="visually-hidden">Tratamiento de interés</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>¿Qué área deseas tratar?</option>
+                            <option value="estrella">Tratamiento Estrella (Exosomas + Láser)</option>
+                            <option value="facial">Rejuvenecimiento Facial 360º</option>
+                            <option value="armonizacion">Armonización Facial</option>
+                            <option value="glow">Glow Therapy</option>
+                            <option value="corporal">Remodelación Corporal</option>
+                        </select>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="rgpd" name="rgpd" required>
+                        <label for="rgpd">He leído y acepto la <a href="privacy.html" target="_blank" rel="noopener">Política de Privacidad</a>.</label>
+                    </div>
+                    <button type="submit" class="btn-primary full-width">Solicitar Diagnóstico Gratuito</button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -170,6 +335,14 @@
             <div class="footer-brand">
                 <h3>L'ÉTERNEL</h3>
                 <p>La ciencia de la belleza atemporal.</p>
+                <p class="sanitary-code">Nº de Registro Sanitario: CS-10492</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <a href="#filosofia">Manifiesto</a>
+                <a href="#tratamiento-estrella">Tratamiento Estrella</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#equipo">Equipo Médico</a>
             </div>
             <div class="footer-links">
                 <h4>Legal</h4>
@@ -179,8 +352,8 @@
             </div>
             <div class="footer-social">
                 <h4>Síguenos</h4>
-                <a href="#">Instagram</a>
-                <a href="#">TikTok</a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Síguenos en Instagram">Instagram</a>
+                <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="Síguenos en TikTok">TikTok</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -188,8 +361,8 @@
         </div>
     </footer>
 
-    <!-- Banner de Cookies -->
-    <div class="cookie-banner" id="cookie-banner">
+    <!-- Banner de Cookies Accesible -->
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
         <div class="cookie-content">
             <p>Utilizamos cookies propias y de terceros para asegurar que te damos la mejor experiencia en nuestra web, analizar el tráfico y personalizar anuncios. Puedes aceptarlas o configurar tus preferencias.</p>
             <div class="cookie-buttons">
