@@ -46,6 +46,12 @@ body {
     width: 100%;
 }
 
+/* Accesibilidad: Oculta visualmente los labels de formularios sin perderlos para lectores de pantalla */
+.visually-hidden {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
+
 /* =========================================
    2. TIPOGRAFÍA Y BOTONES
 ========================================= */
@@ -251,7 +257,51 @@ em { font-style: italic; color: var(--accent-gold); }
 }
 
 /* =========================================
-   6. BENTO GRID (SERVICIOS)
+   6. TRATAMIENTO ESTRELLA
+========================================= */
+.featured-treatment {
+    padding: 6rem 2rem;
+    background-color: var(--bg-dark);
+}
+.featured-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+.featured-image {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+.badge-featured {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(212, 175, 55, 0.9);
+    color: var(--bg-dark);
+    font-weight: bold;
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+.featured-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+.featured-benefits li {
+    margin-bottom: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* =========================================
+   7. BENTO GRID (SERVICIOS)
 ========================================= */
 .services { 
     padding: 4rem 2rem 8rem; 
@@ -308,7 +358,7 @@ em { font-style: italic; color: var(--accent-gold); }
 }
 
 /* =========================================
-   7. RESULTADOS (SLIDER ANTES / DESPUÉS)
+   8. RESULTADOS (SLIDER ANTES / DESPUÉS)
 ========================================= */
 .results { padding: 4rem 2rem 8rem; }
 .compare-wrapper {
@@ -322,7 +372,7 @@ em { font-style: italic; color: var(--accent-gold); }
 .compare-container {
     position: relative; 
     width: 100%;
-    height: 480px; /* Altura fija para estabilizar el contenedor */
+    height: 480px; 
     --pos: 50%;
 }
 .compare-container img {
@@ -375,52 +425,170 @@ em { font-style: italic; color: var(--accent-gold); }
 }
 
 /* =========================================
-   8. FAQ & CONTACTO
+   9. TESTIMONIOS Y EQUIPO MÉDICO
+========================================= */
+/* Testimonios */
+.testimonials {
+    padding: 6rem 2rem;
+    background: var(--bg-card);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+.google-rating {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+.google-rating .stars {
+    color: var(--accent-gold);
+    margin-right: 6px;
+    font-size: 1.2rem;
+}
+.testimonials-grid {
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.testimonial-card {
+    background: var(--bg-dark);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.quote-stars {
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.testimonial-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+.author-info {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1rem;
+}
+.author-info strong { color: var(--text-main); }
+.author-info span { color: var(--accent-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* Equipo Médico */
+.team-section {
+    padding: 6rem 2rem;
+    background-color: var(--bg-dark);
+}
+.team-grid {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+.team-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: var(--transition);
+}
+.team-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+.team-img img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+.team-info { padding: 2rem; }
+.team-info h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.team-info .role {
+    display: block;
+    color: var(--accent-gold);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.team-info p { color: var(--text-muted); font-size: 0.9rem; }
+
+/* =========================================
+   10. FAQ & CONTACTO
 ========================================= */
 .faq-section { padding: 4rem 2rem 6rem; max-width: 800px; margin: 0 auto; }
-.faq-item {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    margin-bottom: 0.5rem;
-}
+.faq-item { border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.5rem; }
 .faq-question {
     width: 100%; background: none; border: none; color: var(--text-main);
     font-family: var(--font-heading); font-size: 1.2rem; text-align: left;
-    padding: 1.2rem 0; cursor: pointer; display: flex; justify-content: space-between;
-    align-items: center;
+    padding: 1.2rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
 }
-.faq-question::after {
-    content: '+'; color: var(--accent-gold); font-size: 1.4rem; transition: var(--transition);
-}
+.faq-question::after { content: '+'; color: var(--accent-gold); font-size: 1.4rem; transition: var(--transition); }
 .faq-question.active::after { transform: rotate(45deg); }
-.faq-answer {
-    max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
-}
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
 .faq-answer p { padding-bottom: 1.2rem; color: var(--text-muted); font-size: 0.95rem; }
 
-.contact { padding: 6rem 2rem; background: var(--bg-card); display: flex; justify-content: center; }
-.contact-box { max-width: 550px; width: 100%; text-align: center; }
-.contact-form { margin-top: 2.5rem; text-align: left; }
+/* Contacto Rediseñado */
+.contact { 
+    padding: 6rem 2rem; 
+    background: var(--bg-card); 
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+.contact-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+.info-details { margin-top: 2.5rem; }
+.info-item { margin-bottom: 1.5rem; }
+.info-item strong { display: block; color: var(--text-main); margin-bottom: 0.3rem; font-size: 1.1rem; }
+.info-item p { color: var(--text-muted); }
+.info-item a { color: var(--accent-gold); text-decoration: none; transition: var(--transition); }
+.info-item a:hover { color: var(--text-main); }
+
+.contact-box { 
+    width: 100%; 
+    text-align: left; 
+    background: var(--bg-dark); 
+    padding: 3rem; 
+    border-radius: var(--radius-lg); 
+    border: 1px solid rgba(255,255,255,0.05); 
+}
+.contact-box h3 { font-size: 2rem; margin-bottom: 1.5rem; }
+.contact-form { margin-top: 1.5rem; }
 .form-group { margin-bottom: 1.2rem; }
 .form-group input, .form-group select {
-    width: 100%; padding: 1rem; background: var(--bg-dark);
+    width: 100%; padding: 1rem; background: var(--bg-card);
     border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm);
-    color: var(--text-main); font-family: var(--font-body); outline: none;
+    color: var(--text-main); font-family: var(--font-body); outline: none; transition: var(--transition);
 }
 .form-group input:focus, .form-group select:focus { border-color: var(--accent-gold); }
-.checkbox-group { display: flex; gap: 10px; align-items: center; }
+.checkbox-group { display: flex; gap: 10px; align-items: center; margin-bottom: 1.5rem; }
 .checkbox-group input { width: auto; }
 .checkbox-group label, .checkbox-group a { color: var(--text-muted); font-size: 0.85rem; }
 .checkbox-group a { color: var(--accent-gold); }
 .full-width { width: 100%; }
 
 /* =========================================
-   9. FOOTER & COOKIES
+   11. FOOTER & COOKIES
 ========================================= */
 .footer { padding: 4rem 2rem 2rem; background: #080809; border-top: 1px solid rgba(255,255,255,0.05); }
-.footer-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+.footer-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; }
 .footer h4 { color: var(--accent-gold); margin-bottom: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
-.footer a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 0.6rem; font-size: 0.9rem; }
+.footer a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 0.6rem; font-size: 0.9rem; transition: var(--transition);}
 .footer a:hover { color: var(--text-main); }
+.sanitary-code { font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; }
 .footer-bottom { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-muted); font-size: 0.8rem; }
 
 .cookie-banner {
@@ -436,14 +604,21 @@ em { font-style: italic; color: var(--accent-gold); }
 .small { padding: 0.5rem 1.2rem; font-size: 0.8rem; }
 
 /* =========================================
-   10. RESPONSIVE
+   12. RESPONSIVE
 ========================================= */
 @media (max-width: 900px) {
     .manifesto-grid { grid-template-columns: 1fr; gap: 2rem; }
+    
+    .featured-container, 
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    
     .bento-grid { grid-template-columns: 1fr; grid-auto-rows: 250px; }
     .bento-item.large, .bento-item.wide { grid-column: span 1; grid-row: span 1; }
+    
     .compare-container { height: 320px; }
-    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+    
     .cookie-content { flex-direction: column; text-align: center; }
     
     .nav-links {
@@ -453,172 +628,4 @@ em { font-style: italic; color: var(--accent-gold); }
     }
     .nav-links.active { right: 0; }
     .hamburger { display: block; }
-}
-
-/* Utilidad de accesibilidad para labels ocultos visualmente */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-/* Tratamiento Estrella */
-.featured-treatment {
-    padding: 80px 5%;
-    background-color: #fcfbf9;
-}
-.featured-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
-}
-.featured-image {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-}
-.featured-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-.badge-featured {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: rgba(0, 0, 0, 0.75);
-    color: #fff;
-    padding: 6px 16px;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 20px;
-    backdrop-filter: blur(5px);
-}
-.featured-benefits {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0 30px;
-}
-.featured-benefits li {
-    margin-bottom: 10px;
-    color: #4a4a4a;
-}
-
-/* Testimonios */
-.testimonials {
-    padding: 80px 5%;
-    background: #fff;
-}
-.google-rating {
-    margin-top: 10px;
-    font-size: 0.95rem;
-    color: #555;
-}
-.google-rating .stars {
-    color: #e6a15c;
-    margin-right: 6px;
-}
-.testimonials-grid {
-    max-width: 1200px;
-    margin: 40px auto 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-.testimonial-card {
-    background: #f9f8f6;
-    padding: 30px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.quote-stars {
-    color: #e6a15c;
-    margin-bottom: 12px;
-}
-.author-info {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    font-size: 0.9rem;
-}
-
-/* Equipo Médico */
-.team-section {
-    padding: 80px 5%;
-    background-color: #fcfbf9;
-}
-.team-grid {
-    max-width: 1000px;
-    margin: 40px auto 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-}
-.team-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-}
-.team-img img {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-}
-.team-info {
-    padding: 25px;
-}
-.team-info .role {
-    display: block;
-    color: #8c8275;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-/* Rediseño Contacto & Layout */
-.contact-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-}
-.info-details {
-    margin-top: 30px;
-}
-.info-item {
-    margin-bottom: 20px;
-}
-.info-item strong {
-    display: block;
-    margin-bottom: 5px;
-}
-.sanitary-code {
-    font-size: 0.8rem;
-    color: #888;
-    margin-top: 8px;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .featured-container,
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
 }
