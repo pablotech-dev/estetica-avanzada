@@ -3,75 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA | Clínica de Estética Avanzada</title>
-    <!-- Google Fonts -->
+    <title>L'Éternel Clinic | Estética Avanzada y Antiaging</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Promo Bar -->
-    <div class="promo-bar">
-        Descubre nuestra nueva aparatología láser. 20% de descuento en tu primera sesión de diagnóstico.
-    </div>
-
-    <!-- Navegación -->
-    <nav class="navbar">
+    <!-- Navegación Glassmorphism -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="brand-logo">AURA.</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Tratamientos</a></li>
-                <li><a href="#contacto">Reserva</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="index.html" class="logo">L'ÉTERNEL</a>
+            <div class="nav-links">
+                <a href="#filosofia">Manifiesto</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#resultados">Resultados</a>
+                <a href="service.html">Tratamiento Estrella</a>
             </div>
+            <a href="#contacto" class="btn-primary nav-cta">Reservar Cita</a>
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="hero-content">
-            <h1>Eleva la belleza natural de tu piel.</h1>
-            <p>Ciencia, tecnología y bienestar se fusionan en protocolos exclusivos diseñados a medida para ti.</p>
-            <a href="#contacto" class="btn btn-primary">Solicitar Valoración</a>
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1920&q=80" alt="Mujer con piel perfecta">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content reveal slide-up">
+            <h1>Eleva tu <em>Belleza</em><br>a su Máxima Expresión</h1>
+            <p>La ciencia y el arte se fusionan para revelar tu mejor versión. Protocolos no invasivos, resultados definitivos.</p>
+            <div class="hero-actions">
+                <a href="#contacto" class="btn-primary">Descubrir Tratamientos</a>
+                <a href="#filosofia" class="btn-secondary">Nuestra Filosofía</a>
+            </div>
         </div>
     </header>
 
-    <!-- Sección Interactiva: Diagnóstico Express -->
-    <section class="interactive-diagnosis">
-        <div class="container text-center">
-            <h2>Descubre tu Tratamiento Ideal</h2>
-            <p>Selecciona qué aspecto de tu piel te gustaría mejorar hoy y nuestro algoritmo te sugerirá el protocolo perfecto.</p>
-            
-            <div class="quiz-buttons">
-                <button class="btn btn-outline quiz-btn" data-concern="luminosidad">Falta de Luminosidad</button>
-                <button class="btn btn-outline quiz-btn" data-concern="firmeza">Pérdida de Firmeza</button>
-                <button class="btn btn-outline quiz-btn" data-concern="manchas">Manchas e Hiperpigmentación</button>
+    <!-- Filosofía / Manifiesto Editorial -->
+    <section id="filosofia" class="manifesto">
+        <div class="manifesto-grid">
+            <div class="manifesto-text reveal fade-in">
+                <span class="eyebrow">Nuestro Manifiesto</span>
+                <h2>No cambiamos quién eres. <br>Revelamos tu luz.</h2>
+                <p>En L'Éternel creemos que la estética avanzada no trata de ocultar, sino de potenciar. Cada rostro cuenta una historia y nuestro enfoque clínico está diseñado para que esa historia se lea con vitalidad, frescura y absoluta naturalidad.</p>
+                <p>Utilizamos aparatología de vanguardia y activos biológicos puros para devolverle a tu piel el tiempo que la ciudad y el estrés le han robado.</p>
             </div>
-
-            <div id="quiz-result" class="quiz-result hidden">
-                <!-- Aquí se inyecta la respuesta con JS -->
+            <div class="manifesto-img reveal slide-up">
+                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" alt="Detalle estético">
             </div>
         </div>
     </section>
 
-    <!-- Contacto / Reservas (Cumplimiento RGPD) -->
-    <section id="contacto" class="contact-section container">
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h2>Comienza tu cambio hoy.</h2>
-                <p>Déjanos tus datos y una de nuestras especialistas se pondrá en contacto contigo para agendar tu diagnóstico facial o corporal con cámara de alta precisión.</p>
-                <br>
-                <p><strong>📍 Ubicación:</strong> Calle de la Belleza 123, Madrid</p>
-                <p><strong>📞 Teléfono:</strong> +34 912 345 678</p>
+    <!-- Servicios: Bento Grid -->
+    <section id="servicios" class="services">
+        <div class="section-header reveal fade-in">
+            <h2>Nuestros Protocolos</h2>
+            <p>Diseñados a medida según el lienzo de tu piel.</p>
+        </div>
+        <div class="bento-grid">
+            <div class="bento-item large reveal fade-in" style="background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80');">
+                <div class="bento-content">
+                    <h3>Rejuvenecimiento Facial 360º</h3>
+                    <p>Láser fraccional y exosomas para una renovación celular profunda.</p>
+                </div>
             </div>
-            <form class="contact-form" action="#" method="POST">
+            <div class="bento-item reveal fade-in delay-1">
+                <div class="bento-content dark-card">
+                    <h3>Armonización</h3>
+                    <p>Ácido hialurónico dinámico para reestructurar volúmenes perdidos.</p>
+                </div>
+            </div>
+            <div class="bento-item reveal fade-in delay-2">
+                <div class="bento-content nude-card">
+                    <h3>Glow Therapy</h3>
+                    <p>Infusión vitamínica profunda para un brillo instantáneo previo a eventos.</p>
+                </div>
+            </div>
+            <div class="bento-item wide reveal fade-in">
+                <div class="bento-content image-card" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80');">
+                    <h3>Remodelación Corporal Alta Gama</h3>
+                    <a href="service.html" class="link-arrow">Saber más ➝</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Antes y Después (Interactive JS) -->
+    <section id="resultados" class="results">
+        <div class="section-header reveal fade-in">
+            <h2>Resultados Reales</h2>
+            <p>Desliza para ver la transformación (Protocolo Luminosidad).</p>
+        </div>
+        <div class="compare-wrapper reveal slide-up">
+            <div class="compare-container" id="compare-container">
+                <!-- Imagen Después (Fondo) -->
+                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1000&q=80" alt="Después del tratamiento" class="img-after">
+                <!-- Imagen Antes (Superpuesta con clip-path) -->
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80" alt="Antes del tratamiento" class="img-before" style="filter: grayscale(80%) blur(1px);">
+                <!-- Control deslizante -->
+                <input type="range" min="0" max="100" value="50" class="slider" id="compare-slider">
+                <div class="slider-line">
+                    <div class="slider-button">↔</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Acordeón -->
+    <section id="faq" class="faq-section">
+        <div class="section-header reveal fade-in">
+            <h2>Preguntas Frecuentes</h2>
+        </div>
+        <div class="faq-container reveal slide-up">
+            <div class="faq-item">
+                <button class="faq-question">¿Los tratamientos son dolorosos?</button>
+                <div class="faq-answer"><p>No. Utilizamos anestesia tópica de alta penetración y tecnología de enfriamiento epidérmico para asegurar una experiencia completamente confortable.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Cuánto tiempo tardaré en ver resultados?</button>
+                <div class="faq-answer"><p>Depende del protocolo. Las terapias de hidratación ("Glow") muestran resultados inmediatos. Los tratamientos estimuladores de colágeno alcanzan su pico entre la semana 3 y 4.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Tienen efectos secundarios?</button>
+                <div class="faq-answer"><p>Nuestros procedimientos son mínimamente invasivos. Puedes experimentar un leve enrojecimiento que desaparece en unas pocas horas, permitiéndote retomar tu vida normal al instante.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto (GDPR) -->
+    <section id="contacto" class="contact">
+        <div class="contact-box reveal fade-in">
+            <h2>Comienza tu viaje</h2>
+            <p>Reserva tu diagnóstico inicial gratuito con nuestro equipo médico.</p>
+            <form action="#" method="POST" class="contact-form">
                 <div class="form-group">
                     <input type="text" id="name" placeholder="Tu Nombre Completo" required>
                 </div>
@@ -79,52 +148,53 @@
                     <input type="email" id="email" placeholder="Correo Electrónico" required>
                 </div>
                 <div class="form-group">
-                    <select id="interest" required>
-                        <option value="" disabled selected>Selecciona un área de interés</option>
-                        <option value="facial">Medicina Estética Facial</option>
+                    <select id="service" required>
+                        <option value="" disabled selected>¿Qué te interesa mejorar?</option>
+                        <option value="facial">Rejuvenecimiento Facial</option>
                         <option value="corporal">Remodelación Corporal</option>
-                        <option value="depilacion">Depilación Láser</option>
+                        <option value="piel">Calidad de la Piel / Acné</option>
                     </select>
                 </div>
-                <!-- Checkbox RGPD -->
                 <div class="form-group checkbox-group">
                     <input type="checkbox" id="rgpd" required>
-                    <label for="rgpd">He leído y acepto la <a href="legal.html">Política de Privacidad</a> y consiento el tratamiento de mis datos.</label>
+                    <label for="rgpd">He leído y acepto la <a href="privacy.html">Política de Privacidad</a>.</label>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Solicitar Cita</button>
+                <button type="submit" class="btn-primary full-width">Solicitar Cita</button>
             </form>
         </div>
     </section>
 
     <!-- Footer Legal -->
-    <footer class="site-footer">
-        <div class="container footer-content">
+    <footer class="footer">
+        <div class="footer-grid">
             <div class="footer-brand">
-                <h3>AURA.</h3>
-                <p>Clínica de Estética Avanzada.</p>
+                <h3>L'ÉTERNEL</h3>
+                <p>La ciencia de la belleza atemporal.</p>
             </div>
             <div class="footer-links">
                 <h4>Legal</h4>
-                <ul>
-                    <li><a href="legal.html">Aviso Legal</a></li>
-                    <li><a href="legal.html">Política de Privacidad</a></li>
-                    <li><a href="legal.html">Política de Cookies</a></li>
-                    <li><a href="legal.html">Términos y Condiciones</a></li>
-                </ul>
+                <a href="privacy.html">Política de Privacidad</a>
+                <a href="privacy.html">Aviso Legal</a>
+                <a href="privacy.html">Política de Cookies</a>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 AURA Estética Avanzada. Todos los derechos reservados.</p>
+            <p>&copy; 2026 L'Éternel Clinic. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <!-- Banner de Cookies -->
-    <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-banner" id="cookie-banner">
         <div class="cookie-content">
-            <p>Utilizamos cookies propias y de terceros para fines analíticos y para mostrarte publicidad personalizada en base a un perfil elaborado a partir de tus hábitos de navegación. <a href="legal.html">Más información</a>.</p>
+            <p>Utilizamos cookies propias y de terceros para asegurar que te damos la mejor experiencia en nuestra web, analizar el tráfico y personalizar anuncios. Puedes aceptarlas o configurar tus preferencias.</p>
             <div class="cookie-buttons">
-                <button id="btn-config-cookies" class="btn btn-outline btn-sm">Configurar</button>
-                <button id="btn-accept-cookies" class="btn btn-primary btn-sm">Aceptar Todas</button>
+                <button id="accept-cookies" class="btn-primary small">Aceptar Todas</button>
+                <button id="config-cookies" class="btn-secondary small">Configurar</button>
             </div>
         </div>
     </div>
