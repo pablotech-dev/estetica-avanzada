@@ -296,7 +296,7 @@
 
             <div class="contact-box">
                 <h3>Reserva tu Cita</h3>
-                <form action="#" method="POST" class="contact-form">
+                <form id="contact-form" action="#" method="POST" class="contact-form">
                     <div class="form-group">
                         <label for="name" class="visually-hidden">Nombre completo</label>
                         <input type="text" id="name" name="name" placeholder="Tu Nombre Completo" required autocomplete="name">
@@ -325,6 +325,8 @@
                         <label for="rgpd">He leído y acepto la <a href="privacy.html" target="_blank" rel="noopener">Política de Privacidad</a>.</label>
                     </div>
                     <button type="submit" class="btn-primary full-width">Solicitar Diagnóstico Gratuito</button>
+                    <!-- Mensaje de éxito oculto -->
+                    <p id="form-success-msg" style="display: none; color: var(--accent-gold); margin-top: 15px; font-weight: 600; text-align: center;">¡Gracias! Hemos recibido tu solicitud. Nos pondremos en contacto pronto.</p>
                 </form>
             </div>
         </div>
