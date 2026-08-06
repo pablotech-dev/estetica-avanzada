@@ -113,23 +113,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ========================================================
-       7. INTERCEPCIÓN DEL FORMULARIO DE CONTACTO
-    ======================================================== */
-    const contactForm = document.getElementById('contact-form');
-    const successMsg = document.getElementById('form-success-msg');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Evita que la página se recargue
-            
-            // Ocultar botón y mostrar mensaje
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            submitBtn.style.display = 'none';
-            successMsg.style.display = 'block';
-
-            // Opcional: limpiar los campos
-            contactForm.reset();
-        });
-    }
 });

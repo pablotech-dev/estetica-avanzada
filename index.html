@@ -302,38 +302,23 @@
 
             <div class="contact-box">
                 <h3>Reserva tu Cita</h3>
-                <form id="contact-form" action="#" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label for="name" class="visually-hidden">Nombre completo</label>
-                        <input type="text" id="name" name="name" placeholder="Tu Nombre Completo" required autocomplete="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="visually-hidden">Correo electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required autocomplete="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone" class="visually-hidden">Teléfono</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Teléfono de Contacto" autocomplete="tel">
-                    </div>
-                    <div class="form-group">
-                        <label for="service" class="visually-hidden">Tratamiento de interés</label>
-                        <select id="service" name="service" required>
-                            <option value="" disabled selected>¿Qué área deseas tratar?</option>
-                            <option value="estrella">Tratamiento Estrella (Exosomas + Láser)</option>
-                            <option value="facial">Rejuvenecimiento Facial 360º</option>
-                            <option value="armonizacion">Armonización Facial</option>
-                            <option value="glow">Glow Therapy</option>
-                            <option value="corporal">Remodelación Corporal</option>
-                        </select>
-                    </div>
-                    <div class="form-group checkbox-group">
-                        <input type="checkbox" id="rgpd" name="rgpd" required>
-                        <label for="rgpd">He leído y acepto la <a href="privacy.html" target="_blank" rel="noopener">Política de Privacidad</a>.</label>
-                    </div>
-                    <button type="submit" class="btn-primary full-width">Solicitar Diagnóstico Gratuito</button>
-                    <!-- Mensaje de éxito oculto -->
-                    <p id="form-success-msg" style="display: none; color: var(--accent-gold); margin-top: 15px; font-weight: 600; text-align: center;">¡Gracias! Hemos recibido tu solicitud. Nos pondremos en contacto pronto.</p>
-                </form>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                    Gestionamos nuestra agenda de forma dinámica para ofrecerte la mayor comodidad. Elige tu tratamiento, fecha y hora al instante.
+                </p>
+                
+                <!-- Opción A: Enlace directo con diseño Premium -->
+                <a href="https://www.treatwell.es/establecimiento/TU-CLINICA" target="_blank" rel="noopener" class="btn-treatwell">
+                    <span class="treatwell-icon">📅</span>
+                    Reservar ahora en Treatwell
+                </a>
+
+                <!-- Opción B: Placeholder para Widget (Si Treatwell te proporciona un código de integración tipo iframe o script, ponlo aquí y borra la Opción A) -->
+                <!-- <div id="treatwell-widget-container"></div> -->
+                
+                <div class="booking-guarantee">
+                    <span class="stars">★★★★★</span>
+                    <p>Reserva segura. Confirmación inmediata.</p>
+                </div>
             </div>
         </div>
     </section>

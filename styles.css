@@ -672,3 +672,57 @@ em { font-style: italic; color: var(--accent-gold); }
     .nav-links.active { right: 0; }
     .hamburger { display: block; }
 }
+
+/* =========================================
+   RESERVA DINÁMICA (TREATWELL)
+========================================= */
+.btn-treatwell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 1.2rem;
+    background-color: var(--text-main); /* Botón blanco/claro para máximo contraste */
+    color: var(--bg-dark);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.btn-treatwell:hover {
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+.treatwell-icon {
+    font-size: 1.4rem;
+}
+
+.booking-guarantee {
+    margin-top: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.booking-guarantee .stars {
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.booking-guarantee p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
