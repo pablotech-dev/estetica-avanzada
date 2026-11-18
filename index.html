@@ -1,371 +1,819 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Éternel Clinic | Estética Avanzada y Medicina Antiaging</title>
-    
-    <!-- SEO & Metadatos -->
-    <meta name="description" content="L'Éternel Clinic es tu centro de estética avanzada y medicina antiaging. Tratamientos faciales y corporales no invasivos con tecnología de vanguardia y resultados naturales.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://leternelclinic.com/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Open Graph / Redes Sociales -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="L'Éternel Clinic | Estética Avanzada y Medicina Antiaging">
-    <meta property="og:description" content="Elevamos tu belleza a su máxima expresión mediante la ciencia y el arte. Protocolos personalizados no invasivos.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&q=80">
-    <meta property="og:url" content="https://leternelclinic.com/">
+  <!-- ===== SEO básico ===== -->
+  <title>Nácar · Centro de estética en [CIUDAD] | Reserva online</title>
+  <meta name="description" content="Centro de estética en [CIUDAD]: tratamientos faciales, corporales y spa. Reserva online en un minuto y regala belleza esta Navidad.">
+  <link rel="canonical" href="https://[DOMINIO]/">
+  <meta name="theme-color" content="#2A1D19">
 
-    <!-- Tipografía y Estilos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <!-- ===== Open Graph / Twitter ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Nácar Estética">
+  <meta property="og:title" content="Nácar · Centro de estética en [CIUDAD]">
+  <meta property="og:description" content="Faciales, corporales y spa con diagnóstico de piel personalizado. Reserva online y tarjetas regalo de Navidad.">
+  <meta property="og:url" content="https://[DOMINIO]/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nácar · Centro de estética en [CIUDAD]">
+  <meta name="twitter:description" content="Faciales, corporales y spa. Reserva online en un minuto.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- ===== Favicon: [FAVICON] sustituir por el logo del centro ===== -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232A1D19'/%3E%3Ccircle cx='26' cy='26' r='10' fill='%23F6F0E8'/%3E%3C/svg%3E">
+
+  <!-- ===== Tipografías ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+
+  <!-- ===== Datos estructurados: negocio ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Nácar Estética",
+    "description": "Centro de estética con tratamientos faciales, corporales, spa y plan de belleza para novias.",
+    "url": "https://[DOMINIO]/",
+    "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80",
+    "telephone": "[TELÉFONO]",
+    "email": "[EMAIL]",
+    "priceRange": "[RANGO DE PRECIOS, p. ej. €€]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[DIRECCIÓN]",
+      "addressLocality": "[CIUDAD]",
+      "postalCode": "[CÓDIGO POSTAL]",
+      "addressRegion": "[PROVINCIA]",
+      "addressCountry": "ES"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "[HORA APERTURA]",
+        "closes": "[HORA CIERRE]"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "[HORA APERTURA SÁBADO]",
+        "closes": "[HORA CIERRE SÁBADO]"
+      }
+    ],
+    "sameAs": ["[URL INSTAGRAM]", "[URL GOOGLE MAPS]"]
+  }
+  </script>
+
+  <!-- ===== Datos estructurados: preguntas frecuentes ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Tengo que saber qué tratamiento necesito antes de reservar?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Si dudas, reserva un diagnóstico de piel: analizamos tu tipo de piel y tus objetivos y te proponemos un plan realista, sin compromiso." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo funciona la reserva online?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Eliges tratamiento, día y hora, y nos envías la solicitud por WhatsApp con todo ya rellenado. Te confirmamos la cita en cuanto la revisemos." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo cambiar o cancelar mi cita?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Avísanos con al menos [X] horas de antelación por WhatsApp o teléfono y la movemos sin coste." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo son válidas las tarjetas regalo?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Las tarjetas regalo tienen una validez de [X] meses desde la fecha de compra y se pueden usar en cualquier tratamiento del centro." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Los tratamientos son aptos para pieles sensibles?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Adaptamos productos y técnicas a cada piel. Si tienes alguna alergia, embarazo o tratamiento médico en curso, indícalo al reservar." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué formas de pago aceptáis?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Aceptamos [FORMAS DE PAGO, p. ej. efectivo, tarjeta y Bizum]." }
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    <!-- Navegación Glassmorphism -->
-    <nav class="navbar" id="navbar" aria-label="Navegación principal">
-        <div class="nav-container">
-            <a href="index.html" class="logo">L'ÉTERNEL</a>
-            <div class="nav-links">
-                <a href="#filosofia">Manifiesto</a>
-                <a href="#tratamiento-estrella">Destacado</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#resultados">Resultados</a>
-                <a href="#equipo">Equipo</a>
-                <a href="#contacto">Contacto</a>
-            </div>
-            <a href="#contacto" class="btn-primary nav-cta">Reservar Cita</a>
-            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
-                <span></span><span></span>
-            </button>
-        </div>
-    </nav>
+  <!-- =========================================================
+       CABECERA / NAVEGACIÓN
+       ========================================================= -->
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Nácar Estética, inicio">
+        <span class="brand-pearl" aria-hidden="true"></span>
+        <span class="brand-name">Nácar</span>
+        <span class="brand-tag">estética</span>
+      </a>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1920&q=80" 
-                 alt="Tratamiento de piel radiante en L'Éternel Clinic" 
-                 width="1920" height="1080"
-                 loading="eager">
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="hero-content reveal slide-up">
-            <h1>Eleva tu <em>Belleza</em><br>a su Máxima Expresión</h1>
-            <p>La ciencia y el arte se fusionan para revelar tu mejor versión. Protocolos no invasivos, resultados definitivos.</p>
-            <div class="hero-actions">
-                <a href="#contacto" class="btn-primary">Descubrir Tratamientos</a>
-                <a href="#filosofia" class="btn-secondary">Nuestra Filosofía</a>
-            </div>
-        </div>
-    </header>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
 
-    <!-- Filosofía / Manifiesto Editorial -->
-    <section id="filosofia" class="manifesto">
-        <div class="manifesto-grid">
-            <div class="manifesto-text reveal fade-in">
-                <span class="eyebrow">Nuestro Manifiesto</span>
-                <h2>No cambiamos quién eres.<br>Revelamos tu luz.</h2>
-                <p>En L'Éternel creemos que la estética avanzada no trata de ocultar, sino de potenciar. Cada rostro cuenta una historia y nuestro enfoque clínico está diseñado para que esa historia se lea con vitalidad, frescura y absoluta naturalidad.</p>
-                <p>Utilizamos aparatología de vanguardia y activos biológicos puros para devolverle a tu piel el tiempo que la ciudad y el estrés le han robado.</p>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#tratamientos">Tratamientos</a></li>
+          <li><a href="#reserva">Reserva online</a></li>
+          <li><a href="#regalo">Tarjetas regalo</a></li>
+          <li><a href="novias.html">Novias</a></li>
+          <li><a href="#opiniones">Opiniones</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a class="btn btn-dark nav-cta" href="#reserva">Reservar cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- =========================================================
+         HERO · TRATAMIENTO ESTRELLA
+         ========================================================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Centro de estética en [CIUDAD]</p>
+          <h1 id="hero-title" class="display">
+            Tu piel,<br><em>en su mejor</em><br>versión.
+          </h1>
+          <p class="lead">Tratamientos faciales, corporales y de spa diseñados a partir de un diagnóstico real de tu piel. Sin protocolos de catálogo: lo que necesitas tú, hoy.</p>
+
+          <!-- Tarjeta del tratamiento estrella -->
+          <article class="star-card reveal" aria-labelledby="estrella-title">
+            <p class="star-label">✦ Tratamiento estrella</p>
+            <h2 id="estrella-title" class="star-title">Hydra Glow Facial</h2>
+            <p class="star-desc">Limpieza profunda, exfoliación, infusión de ácido hialurónico y masaje lifting. Sales con la piel jugosa, luminosa y lista para cualquier plan.</p>
+            <ul class="star-meta" aria-label="Detalles del tratamiento">
+              <li><strong>75</strong> min</li>
+              <li>Todo tipo de pieles</li>
+              <li>desde <strong>[PRECIO]</strong></li>
+            </ul>
+            <div class="btn-row">
+              <a class="btn btn-dark" href="#reserva" data-book="hydra-glow">Reservar</a>
+              <a class="btn btn-link" href="#tratamientos">Ver todos los tratamientos</a>
             </div>
-            <div class="manifesto-img reveal slide-up">
-                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" 
-                     alt="Detalle de cuidado facial especializado" 
-                     width="800" height="1000"
-                     loading="lazy">
-            </div>
+          </article>
         </div>
+
+        <div class="hero-visual">
+          <figure class="arch arch-hero media">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=80"
+                 alt="Mujer relajada recibiendo un tratamiento facial hidratante en cabina"
+                 width="900" height="1200" fetchpriority="high">
+          </figure>
+
+          <!-- Sello giratorio -->
+          <svg class="seal" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <path id="seal-path" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/>
+            </defs>
+            <circle cx="100" cy="100" r="98" class="seal-bg"/>
+            <text class="seal-text"><textPath href="#seal-path">reserva online · diagnóstico de piel · nácar ·</textPath></text>
+            <circle cx="100" cy="100" r="22" class="seal-pearl"/>
+          </svg>
+
+          <p class="hero-rating"><span aria-hidden="true">★★★★★</span> [4,9] en Google</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Tratamiento Estrella Destacado -->
-    <section id="tratamiento-estrella" class="featured-treatment">
-        <div class="featured-container reveal fade-in">
-            <div class="featured-image">
-                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=80" 
-                     alt="Protocolo de regeneración con exosomas y láser" 
-                     width="1000" height="667" 
-                     loading="lazy">
-                <span class="badge-featured">Protocolo Exclusivo</span>
-            </div>
-            <div class="featured-details">
-                <span class="eyebrow">Tratamiento Estrella</span>
-                <h2>Regeneración Celular con Exosomas & Láser Fraccional</h2>
-                <p>Nuestro protocolo insignia combina la potencia del láser fotónico con la infusión de exosomas de máxima pureza para reprogramar el comportamiento celular de tu piel.</p>
-                <ul class="featured-benefits">
-                    <li>✓ Estimulación intensiva de colágeno y elastina</li>
-                    <li>✓ Reducción visible de poros, manchas y arrugas de expresión</li>
-                    <li>✓ Recuperación ultra rápida sin tiempo de baja</li>
-                </ul>
-                <a href="service.html" class="btn-primary">Ver todos los detalles ➔</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Servicios: Bento Grid -->
-    <section id="servicios" class="services">
-        <div class="section-header reveal fade-in">
-            <h2>Nuestros Protocolos</h2>
-            <p>Diseñados a medida según el lienzo único de tu piel.</p>
-        </div>
-        <div class="bento-grid">
-            <div class="bento-item large reveal fade-in" style="background-image: url('https://images.unsplash.com/photo-1512290900673-70020f918f1a?auto=format&fit=crop&w=800&q=80');">
-                <div class="bento-content">
-                    <h3>Rejuvenecimiento Facial 360º</h3>
-                    <p>Combinación sinérgica para renovar las capas profundas de la epidermis.</p>
-                </div>
-            </div>
-            
-            <!-- CORRECCIÓN: Armonización Facial ahora tiene imagen en lugar de color plano -->
-            <div class="bento-item reveal fade-in delay-1" style="background-image: url('https://images.unsplash.com/photo-1590159763121-7c9bc388ddfb?auto=format&fit=crop&w=800&q=80');">
-                <div class="bento-content">
-                    <h3>Armonización Facial</h3>
-                    <p>Ácido hialurónico dinámico para reestructurar volúmenes con máxima naturalidad.</p>
-                </div>
-            </div>
-            
-            <!-- CORRECCIÓN: Glow Therapy ahora tiene imagen en lugar de color plano -->
-            <div class="bento-item reveal fade-in delay-2" style="background-image: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80');">
-                <div class="bento-content">
-                    <h3>Glow Therapy</h3>
-                    <p>Infusión vitamínica profunda para un brillo e hidratación instantáneos.</p>
-                </div>
-            </div>
-            
-            <div class="bento-item wide reveal fade-in" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80');">
-                <div class="bento-content image-card">
-                    <h3>Remodelación Corporal Alta Gama</h3>
-                    <p style="color: var(--text-main); margin-bottom: 1rem;">Esculpe tu figura con tecnología avanzada sin cirugía.</p>
-                    <!-- CORRECCIÓN: Enlace ajustado para evitar Error 404 -->
-                    <a href="#contacto" class="link-arrow">Descubrir protocolo ➝</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galería Antes y Después (Interactive JS) -->
-    <section id="resultados" class="results">
-        <div class="section-header reveal fade-in">
-            <h2>Resultados Reales</h2>
-            <p>Desliza para apreciar la transformación clínica (Protocolo Luminosidad & Textura).</p>
-        </div>
-        <div class="compare-wrapper reveal slide-up">
-            <div class="compare-container" id="compare-container">
-                <!-- Imagen Después (Fondo) -->
-                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1000&q=80" 
-                     alt="Piel del paciente después del tratamiento" 
-                     class="img-after" 
-                     width="1000" height="667" 
-                     loading="lazy">
-                <!-- Imagen Antes (Superpuesta con clip-path) -->
-                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80" 
-                     alt="Piel del paciente antes del tratamiento" 
-                     class="img-before" 
-                     style="filter: grayscale(80%) blur(1px);" 
-                     width="1000" height="667" 
-                     loading="lazy">
-                <!-- Control deslizante accesible -->
-                <input type="range" min="0" max="100" value="50" class="slider" id="compare-slider" aria-label="Deslizador para comparar el estado antes y después del tratamiento">
-                <div class="slider-line" aria-hidden="true">
-                    <div class="slider-button">↔</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonios y Prueba Social -->
-    <section id="testimonios" class="testimonials">
-        <div class="section-header reveal fade-in">
-            <span class="eyebrow">Prueba Social</span>
-            <h2>La Experiencia L'Éternel</h2>
-            <div class="google-rating">
-                <span class="stars">★★★★★</span>
-                <span><strong>4.9 / 5.0</strong> en Google Reviews (+240 pacientes satisfechos)</span>
-            </div>
-        </div>
-        <div class="testimonials-grid reveal slide-up">
-            <div class="testimonial-card">
-                <div class="quote-stars">★★★★★</div>
-                <p>"El trato médico es excepcional. Buscaba un resultado muy natural para suavizar las líneas de expresión y superaron mis expectativas. La clínica impecable."</p>
-                <div class="author-info">
-                    <strong>Elena M.</strong>
-                    <span>Tratamiento de Armonización</span>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="quote-stars">★★★★★</div>
-                <p>"El protocolo Glow previo a mi boda fue un acierto total. Mi piel lucía descansada, jugosa y llena de luz. Un equipo de verdaderos profesionales."</p>
-                <div class="author-info">
-                    <strong>Carmen R.</strong>
-                    <span>Glow Therapy</span>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="quote-stars">★★★★★</div>
-                <p>"Aparatología de última generación y un diagnóstico muy honesto desde la primera cita gratuita. Transmiten mucha confianza."</p>
-                <div class="author-info">
-                    <strong>Javier G.</strong>
-                    <span>Rejuvenecimiento Facial 360º</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Equipo Médico e Instalaciones -->
-    <section id="equipo" class="team-section">
-        <div class="section-header reveal fade-in">
-            <span class="eyebrow">Rigor Médico</span>
-            <h2>Manos Expertas, Ciencia y Vanguardia</h2>
-            <p>Detrás de cada protocolo hay un diagnóstico personalizado y la supervisión de especialistas titulados en Medicina Estética.</p>
-        </div>
-        <div class="team-grid reveal slide-up">
-            <div class="team-card">
-                <div class="team-img">
-                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80" 
-                         alt="Dra. Sofía Valenzuela, Directora Médica" 
-                         width="600" height="750" 
-                         loading="lazy">
-                </div>
-                <div class="team-info">
-                    <h3>Dra. Sofía Valenzuela</h3>
-                    <span class="role">Directora Médica & Especialista Antiaging</span>
-                    <p>Máster en Medicina Estética y Regenerativa. Más de 12 años liderando protocolos innovadores de rejuvenecimiento natural.</p>
-                </div>
-            </div>
-            <div class="team-card">
-                <div class="team-img">
-                    <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=600&q=80" 
-                         alt="Instalaciones de L'Éternel Clinic" 
-                         width="600" height="750" 
-                         loading="lazy">
-                </div>
-                <div class="team-info">
-                    <h3>Nuestra Clínica</h3>
-                    <span class="role">Un Santuario de Bienestar</span>
-                    <p>Espacios privados equipados con tecnología médica certificada por la UE para garantizar tu máxima seguridad y confort.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Acordeón -->
-    <section id="faq" class="faq-section">
-        <div class="section-header reveal fade-in">
-            <h2>Preguntas Frecuentes</h2>
-        </div>
-        <div class="faq-container reveal slide-up">
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">¿Los tratamientos son dolorosos?</button>
-                <div class="faq-answer"><p>No. Utilizamos anestesia tópica de alta penetración y tecnología de enfriamiento epidérmico para asegurar una experiencia completamente confortable.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">¿Cuánto tiempo tardaré en ver resultados?</button>
-                <div class="faq-answer"><p>Depende del protocolo. Las terapias de hidratación ("Glow") muestran resultados inmediatos. Los tratamientos estimuladores de colágeno alcanzan su pico entre la semana 3 y 4.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">¿Tienen efectos secundarios o requieren tiempo de baja?</button>
-                <div class="faq-answer"><p>Nuestros procedimientos son mínimamente invasivos. Puedes experimentar un leve enrojecimiento pasajero que desaparece en pocas horas, permitiéndote retomar tu rutina diaria inmediatamente.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" aria-expanded="false">¿Cómo funciona la primera consulta de diagnóstico?</button>
-                <div class="faq-answer"><p>Realizamos un diagnóstico dermoestético digital completo sin coste para evaluar el estado profundo de tu piel y diseñar un plan personalizado ajustado a tus necesidades.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Formulario de Contacto y Ubicación -->
-    <section id="contacto" class="contact">
-        <div class="contact-grid reveal fade-in">
-            <div class="contact-info">
-                <span class="eyebrow">Contacto y Citas</span>
-                <h2>Comienza tu viaje hacia una belleza sin edad</h2>
-                <p>Solicita tu diagnóstico médico personalizado sin compromiso. Nuestro equipo evaluará la salud de tu piel y te propondrá el tratamiento idóneo.</p>
-                
-                <div class="info-details">
-                    <div class="info-item">
-                        <strong>📍 Dirección:</strong>
-                        <p>Calle Velázquez 42, 1º Izq.<br>28001 Madrid, España</p>
-                    </div>
-                    <div class="info-item">
-                        <strong>📞 Teléfono & WhatsApp:</strong>
-                        <p><a href="tel:+34910000000">+34 910 000 000</a></p>
-                    </div>
-                    <div class="info-item">
-                        <strong>⏰ Horario:</strong>
-                        <p>Lunes a Viernes: 10:00 - 20:00 h<br>Sábados: 10:00 - 14:00 h</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-box">
-                <h3>Reserva tu Cita</h3>
-                <p style="color: var(--text-muted); margin-bottom: 2rem;">
-                    Gestionamos nuestra agenda de forma dinámica para ofrecerte la mayor comodidad. Elige tu tratamiento, fecha y hora al instante.
-                </p>
-                
-                <!-- Opción A: Enlace directo con diseño Premium -->
-                <a href="https://www.treatwell.es/establecimiento/TU-CLINICA" target="_blank" rel="noopener" class="btn-treatwell">
-                    <span class="treatwell-icon">📅</span>
-                    Reservar ahora en Treatwell
-                </a>
-
-                <!-- Opción B: Placeholder para Widget (Si Treatwell te proporciona un código de integración tipo iframe o script, ponlo aquí y borra la Opción A) -->
-                <!-- <div id="treatwell-widget-container"></div> -->
-                
-                <div class="booking-guarantee">
-                    <span class="stars">★★★★★</span>
-                    <p>Reserva segura. Confirmación inmediata.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Legal -->
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <h3>L'ÉTERNEL</h3>
-                <p>La ciencia de la belleza atemporal.</p>
-                <p class="sanitary-code">Nº de Registro Sanitario: CS-10492</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navegación</h4>
-                <a href="#filosofia">Manifiesto</a>
-                <a href="#tratamiento-estrella">Tratamiento Estrella</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#equipo">Equipo Médico</a>
-            </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <a href="privacy.html">Política de Privacidad</a>
-                <a href="privacy.html">Aviso Legal</a>
-                <a href="privacy.html">Política de Cookies</a>
-            </div>
-            <div class="footer-social">
-                <h4>Síguenos</h4>
-                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Síguenos en Instagram">Instagram</a>
-                <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="Síguenos en TikTok">TikTok</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 L'Éternel Clinic. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- Banner de Cookies Accesible -->
-    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
-        <div class="cookie-content">
-            <p>Utilizamos cookies propias y de terceros para asegurar que te damos la mejor experiencia en nuestra web, analizar el tráfico y personalizar anuncios. Puedes aceptarlas o configurar tus preferencias.</p>
-            <div class="cookie-buttons">
-                <button id="accept-cookies" class="btn-primary small">Aceptar Todas</button>
-                <button id="config-cookies" class="btn-secondary small">Configurar</button>
-            </div>
-        </div>
+    <!-- Cinta de valores (marquesina) -->
+    <div class="ribbon-wrap" aria-hidden="true">
+     <div class="ribbon">
+      <div class="ribbon-track">
+        <span>Diagnóstico de piel</span><i>●</i><span>Cosmética profesional</span><i>●</i><span>Cabinas privadas</span><i>●</i><span>Reserva en 1 minuto</span><i>●</i><span>Tarjetas regalo</span><i>●</i><span>Plan novias</span><i>●</i>
+        <span>Diagnóstico de piel</span><i>●</i><span>Cosmética profesional</span><i>●</i><span>Cabinas privadas</span><i>●</i><span>Reserva en 1 minuto</span><i>●</i><span>Tarjetas regalo</span><i>●</i><span>Plan novias</span><i>●</i>
+      </div>
+     </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- =========================================================
+         PROPUESTA DE VALOR + CIFRAS
+         ========================================================= -->
+    <section class="section values" aria-labelledby="valores-title">
+      <div class="container values-grid">
+        <div class="values-intro reveal">
+          <p class="eyebrow">Por qué Nácar</p>
+          <h2 id="valores-title" class="h2">El nácar nace de cuidar, capa a capa, lo que hay dentro. <em>Nosotras trabajamos igual.</em></h2>
+        </div>
+
+        <ol class="values-list">
+          <li class="reveal">
+            <span class="num">01</span>
+            <h3>Primero, escuchar tu piel</h3>
+            <p>Cada tratamiento empieza con un análisis de tu piel y de tus objetivos. Así no pagas por nada que no necesites.</p>
+          </li>
+          <li class="reveal">
+            <span class="num">02</span>
+            <h3>Cosmética profesional</h3>
+            <p>Trabajamos con firmas de alta cosmética y aparatología actual: [MARCAS QUE USA EL CENTRO].</p>
+          </li>
+          <li class="reveal">
+            <span class="num">03</span>
+            <h3>Tiempo solo para ti</h3>
+            <p>Cabinas privadas, música suave y cero prisas. Los minutos que reservas son tuyos de verdad.</p>
+          </li>
+          <li class="reveal">
+            <span class="num">04</span>
+            <h3>Resultados que se notan</h3>
+            <p>Te explicamos qué esperar, cuántas sesiones y cómo mantenerlo en casa. Sin promesas imposibles.</p>
+          </li>
+        </ol>
+
+        <figure class="values-photo arch media reveal">
+          <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1600&q=80"
+               alt="Cabina de spa con camilla preparada, toallas y luz cálida"
+               width="800" height="1000" loading="lazy">
+        </figure>
+
+        <dl class="stats reveal">
+          <div><dt>Años cuidando pieles</dt><dd>[X]+</dd></div>
+          <div><dt>Clientas que repiten</dt><dd>[X]%</dd></div>
+          <div><dt>Valoración en Google</dt><dd>[4,9]★</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         TRATAMIENTOS POR CATEGORÍAS (pestañas)
+         ========================================================= -->
+    <section class="section treatments" id="tratamientos" aria-labelledby="tratamientos-title">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow">Carta de tratamientos</p>
+            <h2 id="tratamientos-title" class="h2">Elige por dónde <em>empezar</em></h2>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Categorías de tratamientos">
+            <button class="tab" role="tab" id="tab-facial" aria-selected="true" aria-controls="panel-facial">Facial</button>
+            <button class="tab" role="tab" id="tab-corporal" aria-selected="false" aria-controls="panel-corporal" tabindex="-1">Corporal</button>
+            <button class="tab" role="tab" id="tab-spa" aria-selected="false" aria-controls="panel-spa" tabindex="-1">Spa</button>
+          </div>
+        </header>
+
+        <!-- ---------- FACIAL ---------- -->
+        <div class="panel" role="tabpanel" id="panel-facial" aria-labelledby="tab-facial" tabindex="0">
+          <aside class="panel-aside">
+            <figure class="arch media">
+              <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1600&q=80"
+                   alt="Esteticista aplicando un tratamiento facial con pincel" width="700" height="900" loading="lazy">
+            </figure>
+            <p class="panel-intro">Luminosidad, hidratación, manchas o firmeza: tratamientos que se adaptan a lo que tu piel pide en cada momento del año.</p>
+          </aside>
+          <ul class="t-list">
+            <li class="t-item" data-id="hydra-glow" data-cat="Facial" data-name="Hydra Glow Facial" data-duration="75" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Hydra Glow Facial <span class="badge">Estrella</span></h3>
+                <p>Limpieza, exfoliación, infusión de hialurónico y masaje lifting. Efecto buena cara inmediato.</p>
+              </div>
+              <div class="t-side"><span class="t-time">75 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="hydra-glow">Reservar</a></div>
+            </li>
+            <li class="t-item" data-id="limpieza-profunda" data-cat="Facial" data-name="Limpieza facial profunda" data-duration="60" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Limpieza facial profunda</h3>
+                <p>Extracción cuidadosa, mascarilla según tu piel y alta frecuencia. El reset que tu piel agradece cada estación.</p>
+              </div>
+              <div class="t-side"><span class="t-time">60 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="limpieza-profunda">Reservar</a></div>
+            </li>
+            <li class="t-item" data-id="antimanchas" data-cat="Facial" data-name="Tratamiento antimanchas Vitamina C" data-duration="60" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Antimanchas Vitamina C</h3>
+                <p>Unifica el tono y aporta luz con activos despigmentantes y antioxidantes. Ideal en otoño e invierno.</p>
+              </div>
+              <div class="t-side"><span class="t-time">60 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="antimanchas">Reservar</a></div>
+            </li>
+            <li class="t-item" data-id="radiofrecuencia-facial" data-cat="Facial" data-name="Radiofrecuencia facial" data-duration="50" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Radiofrecuencia facial</h3>
+                <p>Estimula el colágeno para redefinir óvalo y suavizar líneas de expresión, sin agujas ni tiempo de recuperación.</p>
+              </div>
+              <div class="t-side"><span class="t-time">50 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="radiofrecuencia-facial">Reservar</a></div>
+            </li>
+            <li class="t-item" data-id="peeling" data-cat="Facial" data-name="Peeling renovador" data-duration="45" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Peeling renovador</h3>
+                <p>Renovación celular controlada para afinar textura, poros y marcas. Pauta de cuidados en casa incluida.</p>
+              </div>
+              <div class="t-side"><span class="t-time">45 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="peeling">Reservar</a></div>
+            </li>
+            <li class="t-item" data-id="diagnostico" data-cat="Facial" data-name="Diagnóstico de piel" data-duration="30" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Diagnóstico de piel</h3>
+                <p>¿No sabes por dónde empezar? Analizamos tu piel y te proponemos un plan a tu medida, sin compromiso.</p>
+              </div>
+              <div class="t-side"><span class="t-time">30 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="diagnostico">Reservar</a></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ---------- CORPORAL ---------- -->
+        <div class="panel" role="tabpanel" id="panel-corporal" aria-labelledby="tab-corporal" tabindex="0" hidden>
+          <aside class="panel-aside">
+            <figure class="arch media">
+              <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1600&q=80"
+                   alt="Manos de terapeuta realizando un masaje corporal en la espalda" width="700" height="900" loading="lazy">
+            </figure>
+            <p class="panel-intro">Moldea, drena y reafirma. Combinamos técnica manual y aparatología para resultados visibles y sostenibles.</p>
+          </aside>
+          <ul class="t-list">
+            <li class="t-item" data-id="maderoterapia" data-cat="Corporal" data-name="Maderoterapia" data-duration="50" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Maderoterapia</h3>
+                <p>Técnica manual con instrumentos de madera que activa la circulación y ayuda a modelar la silueta.</p>
+              </div>
+              <div class="t-side"><span class="t-time">50 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="maderoterapia">Reservar</a></div>
+            </li>
+            <li class="t-item" data-id="presoterapia" data-cat="Corporal" data-name="Presoterapia" data-duration="40" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Presoterapia</h3>
+                <p>Piernas ligeras desde la primera sesión. Favorece el drenaje y alivia la retención de líquidos.</p>
+              </div>
+              <div class="t-side"><span class="t-time">40 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="presoterapia">Reservar</a></div>
+            </li>
+            <li class="t-item" data-id="radiofrecuencia-corporal" data-cat="Corporal" data-name="Radiofrecuencia corporal" data-duration="50" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Radiofrecuencia corporal</h3>
+                <p>Reafirma abdomen, brazos y piernas estimulando el colágeno. Perfecta tras cambios de peso.</p>
+              </div>
+              <div class="t-side"><span class="t-time">50 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="radiofrecuencia-corporal">Reservar</a></div>
+            </li>
+            <li class="t-item" data-id="drenaje" data-cat="Corporal" data-name="Drenaje linfático manual" data-duration="60" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Drenaje linfático manual</h3>
+                <p>Movimientos suaves y rítmicos que deshinchan, desintoxican y relajan profundamente.</p>
+              </div>
+              <div class="t-side"><span class="t-time">60 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="drenaje">Reservar</a></div>
+            </li>
+            <li class="t-item" data-id="laser" data-cat="Corporal" data-name="Depilación láser diodo" data-duration="30" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Depilación láser diodo</h3>
+                <p>Rápida, eficaz y apta para casi todos los fototipos. Precio por zona; te asesoramos sobre las sesiones.</p>
+              </div>
+              <div class="t-side"><span class="t-time">desde 30 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="laser">Reservar</a></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ---------- SPA ---------- -->
+        <div class="panel" role="tabpanel" id="panel-spa" aria-labelledby="tab-spa" tabindex="0" hidden>
+          <aside class="panel-aside">
+            <figure class="arch media">
+              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80"
+                   alt="Piedras calientes, toallas y velas preparadas para un ritual de spa" width="700" height="900" loading="lazy">
+            </figure>
+            <p class="panel-intro">Rituales para desconectar de verdad. Aromas, calor y manos expertas para que el estrés se quede en la puerta.</p>
+          </aside>
+          <ul class="t-list">
+            <li class="t-item" data-id="ritual-nacar" data-cat="Spa" data-name="Ritual Nácar" data-duration="120" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Ritual Nácar <span class="badge">Firma de la casa</span></h3>
+                <p>Exfoliación con polvo de perla, envoltura hidratante, masaje completo y facial express. Dos horas fuera del mundo.</p>
+              </div>
+              <div class="t-side"><span class="t-time">120 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="ritual-nacar">Reservar</a></div>
+            </li>
+            <li class="t-item" data-id="masaje-relajante" data-cat="Spa" data-name="Masaje relajante aromático" data-duration="60" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Masaje relajante aromático</h3>
+                <p>Aceites esenciales a elegir y presión suave a media. El clásico que nunca falla.</p>
+              </div>
+              <div class="t-side"><span class="t-time">60 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="masaje-relajante">Reservar</a></div>
+            </li>
+            <li class="t-item" data-id="piedras-calientes" data-cat="Spa" data-name="Masaje con piedras calientes" data-duration="75" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Masaje con piedras calientes</h3>
+                <p>El calor del basalto llega donde las manos no alcanzan. Para tensiones profundas y días de frío.</p>
+              </div>
+              <div class="t-side"><span class="t-time">75 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="piedras-calientes">Reservar</a></div>
+            </li>
+            <li class="t-item" data-id="descontracturante" data-cat="Spa" data-name="Masaje descontracturante" data-duration="50" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Masaje descontracturante</h3>
+                <p>Cuello, espalda y hombros: trabajo focalizado para quienes pasan muchas horas sentados.</p>
+              </div>
+              <div class="t-side"><span class="t-time">50 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="descontracturante">Reservar</a></div>
+            </li>
+            <li class="t-item" data-id="ritual-pareja" data-cat="Spa" data-name="Ritual en pareja" data-duration="90" data-price="[PRECIO]">
+              <div class="t-main">
+                <h3>Ritual en pareja</h3>
+                <p>Masaje simultáneo en cabina doble con infusión final. Un plan distinto para compartir.</p>
+              </div>
+              <div class="t-side"><span class="t-time">90 min</span><span class="t-price">[PRECIO]</span><a class="t-book" href="#reserva" data-book="ritual-pareja">Reservar</a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PROCESO · PRIMERA VISITA
+         ========================================================= -->
+    <section class="section process" aria-labelledby="proceso-title">
+      <div class="container">
+        <header class="section-head section-head--narrow">
+          <p class="eyebrow">Tu primera visita</p>
+          <h2 id="proceso-title" class="h2">Cuatro pasos, <em>cero dudas</em></h2>
+        </header>
+        <ol class="steps">
+          <li class="reveal"><span class="step-n">i.</span><h3>Reservas en un minuto</h3><p>Eliges tratamiento, día y hora desde el móvil. Te confirmamos por WhatsApp.</p></li>
+          <li class="reveal"><span class="step-n">ii.</span><h3>Te escuchamos</h3><p>Antes de empezar revisamos tu piel, tus hábitos y lo que quieres conseguir.</p></li>
+          <li class="reveal"><span class="step-n">iii.</span><h3>Te cuidamos</h3><p>Tratamiento en cabina privada con productos elegidos para ti.</p></li>
+          <li class="reveal"><span class="step-n">iv.</span><h3>Te llevas tu plan</h3><p>Rutina para casa y próximos pasos por escrito, para que el resultado dure.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         RESERVA ONLINE
+         ========================================================= -->
+    <section class="section booking" id="reserva" aria-labelledby="reserva-title">
+      <div class="container booking-grid">
+        <div class="booking-head">
+          <p class="eyebrow">Reserva online</p>
+          <h2 id="reserva-title" class="h2">Tu cita, <em>en un minuto</em></h2>
+          <p class="muted">Elige tratamiento, día y hora. Te enviamos la confirmación por WhatsApp en cuanto revisemos la agenda.</p>
+        </div>
+
+        <form class="booking-form" id="booking-form" novalidate>
+          <!-- Paso 1 -->
+          <fieldset class="bf-step">
+            <legend><span class="bf-n">1</span> Tratamiento</legend>
+            <label class="field">
+              <span class="field-label">¿Qué te apetece?</span>
+              <select id="bk-treatment" name="treatment" required>
+                <option value="">Selecciona un tratamiento</option>
+                <!-- Las opciones se generan desde la carta de tratamientos (script.js) -->
+              </select>
+            </label>
+          </fieldset>
+
+          <!-- Paso 2 -->
+          <fieldset class="bf-step">
+            <legend><span class="bf-n">2</span> Día y hora</legend>
+            <label class="field">
+              <span class="field-label">Día</span>
+              <input type="date" id="bk-date" name="date" required>
+            </label>
+            <p class="field-hint" id="bk-date-hint" aria-live="polite">Abrimos de lunes a sábado.</p>
+            <div class="slots" id="bk-slots" role="group" aria-label="Horas disponibles">
+              <p class="slots-empty">Elige un día para ver las horas.</p>
+            </div>
+          </fieldset>
+
+          <!-- Paso 3 -->
+          <fieldset class="bf-step">
+            <legend><span class="bf-n">3</span> Tus datos</legend>
+            <div class="field-row">
+              <label class="field">
+                <span class="field-label">Nombre</span>
+                <input type="text" id="bk-name" name="name" autocomplete="given-name" required>
+              </label>
+              <label class="field">
+                <span class="field-label">Teléfono</span>
+                <input type="tel" id="bk-phone" name="phone" autocomplete="tel" inputmode="tel" required>
+              </label>
+            </div>
+            <label class="field">
+              <span class="field-label">¿Algo que debamos saber? <small>(opcional)</small></span>
+              <textarea id="bk-notes" name="notes" rows="2" placeholder="Alergias, embarazo, piel sensible, primera visita…"></textarea>
+            </label>
+            <label class="check">
+              <input type="checkbox" id="bk-first" name="first">
+              <span>Es mi primera vez en Nácar</span>
+            </label>
+          </fieldset>
+        </form>
+
+        <!-- Resumen tipo ticket -->
+        <aside class="ticket" aria-labelledby="ticket-title">
+          <div class="ticket-top">
+            <p class="ticket-kicker">Tu cita</p>
+            <h3 id="ticket-title" class="ticket-title" data-sum="treatment">Elige un tratamiento</h3>
+          </div>
+          <dl class="ticket-data">
+            <div><dt>Día</dt><dd data-sum="date">—</dd></div>
+            <div><dt>Hora</dt><dd data-sum="time">—</dd></div>
+            <div><dt>Duración</dt><dd data-sum="duration">—</dd></div>
+            <div><dt>Precio</dt><dd data-sum="price">—</dd></div>
+          </dl>
+          <p class="form-error" id="bk-error" role="alert"></p>
+          <button class="btn btn-dark btn-block" type="submit" form="booking-form">Solicitar cita por WhatsApp</button>
+          <p class="ticket-note">¿Prefieres llamar? <a href="tel:[TELÉFONO]">[TELÉFONO]</a></p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         TARJETAS REGALO DE NAVIDAD
+         ========================================================= -->
+    <section class="section gift" id="regalo" aria-labelledby="regalo-title">
+      <div class="snow" aria-hidden="true"></div>
+      <div class="container gift-grid">
+        <div class="gift-head">
+          <p class="eyebrow eyebrow--light">Navidad en Nácar</p>
+          <h2 id="regalo-title" class="h2 h2--light">Regala tiempo <em>para cuidarse</em></h2>
+          <p class="gift-countdown" id="gift-countdown" aria-live="polite">Quedan pocos días para Navidad</p>
+          <ul class="gift-perks">
+            <li>Personalizada con su nombre y tu mensaje</li>
+            <li>En formato digital o en caja regalo para recoger</li>
+            <li>Válida para cualquier tratamiento durante [X] meses</li>
+          </ul>
+        </div>
+
+        <form class="gift-form" id="gift-form" novalidate>
+          <fieldset>
+            <legend class="field-label">¿Qué quieres regalar?</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="g-value" value="50 €" checked><span>50 €</span></label>
+              <label class="chip"><input type="radio" name="g-value" value="75 €"><span>75 €</span></label>
+              <label class="chip"><input type="radio" name="g-value" value="100 €"><span>100 €</span></label>
+              <label class="chip"><input type="radio" name="g-value" value="150 €"><span>150 €</span></label>
+              <label class="chip"><input type="radio" name="g-value" value="tratamiento"><span>Un tratamiento</span></label>
+            </div>
+            <label class="field gift-treatment" hidden>
+              <span class="field-label">Tratamiento</span>
+              <select id="g-treatment"></select>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend class="field-label">Diseño</legend>
+            <div class="swatches">
+              <label class="swatch"><input type="radio" name="g-design" value="abeto" checked><span class="sw sw-abeto"></span><span>Abeto</span></label>
+              <label class="swatch"><input type="radio" name="g-design" value="nacar"><span class="sw sw-nacar"></span><span>Nácar</span></label>
+              <label class="swatch"><input type="radio" name="g-design" value="noche"><span class="sw sw-noche"></span><span>Medianoche</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field-row">
+            <label class="field"><span class="field-label">Para</span><input type="text" id="g-to" maxlength="30" placeholder="Lucía"></label>
+            <label class="field"><span class="field-label">De parte de</span><input type="text" id="g-from" maxlength="30" placeholder="Tu nombre"></label>
+          </div>
+          <label class="field">
+            <span class="field-label">Mensaje <small id="g-count">0/120</small></span>
+            <textarea id="g-msg" rows="2" maxlength="120" placeholder="Porque te mereces una pausa…"></textarea>
+          </label>
+
+          <fieldset>
+            <legend class="field-label">Entrega</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="g-delivery" value="Digital (PDF para imprimir o reenviar)" checked><span>Digital</span></label>
+              <label class="chip"><input type="radio" name="g-delivery" value="Caja regalo para recoger en el centro"><span>Caja regalo</span></label>
+            </div>
+          </fieldset>
+
+          <button class="btn btn-gold btn-block" type="submit">Pedir esta tarjeta por WhatsApp</button>
+        </form>
+
+        <!-- Vista previa en vivo -->
+        <div class="gift-preview-wrap" aria-live="polite">
+          <p class="preview-label">Vista previa</p>
+          <div class="gift-card design-abeto" id="gift-card">
+            <span class="gc-pearl" aria-hidden="true"></span>
+            <p class="gc-brand">Nácar <span>tarjeta regalo</span></p>
+            <p class="gc-value" id="gc-value">50 €</p>
+            <p class="gc-to">Para <strong id="gc-to">Lucía</strong></p>
+            <p class="gc-msg" id="gc-msg">Porque te mereces una pausa…</p>
+            <p class="gc-from">De <span id="gc-from">ti</span> · Navidad <span id="gc-year">2026</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         RESEÑAS
+         ========================================================= -->
+    <section class="section reviews" id="opiniones" aria-labelledby="opiniones-title">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow">Opiniones</p>
+            <h2 id="opiniones-title" class="h2">Lo que dicen <em>al salir</em></h2>
+          </div>
+          <div class="score">
+            <p class="score-num">[4,9]</p>
+            <p class="score-stars" aria-label="Valoración media de [4,9] sobre 5"><span aria-hidden="true">★★★★★</span></p>
+            <p class="score-src">[X] reseñas en Google</p>
+          </div>
+        </header>
+
+        <p class="demo-note">Reseñas de ejemplo para la demo: se sustituyen por las reseñas reales del centro.</p>
+
+        <div class="reviews-grid">
+          <figure class="review review--big reveal">
+            <blockquote><p>«Llegué con la piel apagada y muchas dudas. Me explicaron todo sin agobiarme y después del Hydra Glow me preguntaron en el trabajo qué me había hecho.»</p></blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">L</span>Laura M. · Hydra Glow Facial</figcaption>
+          </figure>
+          <figure class="review reveal">
+            <blockquote><p>«El Ritual Nácar es lo mejor que me he regalado este año. Dos horas que parecen un fin de semana.»</p></blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">C</span>Carmen R. · Ritual Nácar</figcaption>
+          </figure>
+          <figure class="review reveal">
+            <blockquote><p>«Reservar desde el móvil fue rapidísimo y me confirmaron en minutos. Trato cercano y muy profesional.»</p></blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">P</span>Patricia G. · Limpieza profunda</figcaption>
+          </figure>
+          <figure class="review reveal">
+            <blockquote><p>«Regalé una tarjeta a mi madre por Navidad y ya es clienta fija. Ahora se la regala ella a mí.»</p></blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">A</span>Andrea S. · Tarjeta regalo</figcaption>
+          </figure>
+          <figure class="review reveal">
+            <blockquote><p>«Hice el plan novia completo. El día de la boda la piel estaba perfecta y el maquillaje aguantó hasta las seis de la mañana.»</p></blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">M</span>Marta V. · Plan Novias</figcaption>
+          </figure>
+        </div>
+
+        <p class="reviews-cta"><a class="btn btn-outline" href="[URL GOOGLE RESEÑAS]">Leer todas las reseñas en Google</a></p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         NOVIAS (teaser hacia novias.html)
+         ========================================================= -->
+    <section class="section brides-teaser" aria-labelledby="novias-title">
+      <div class="container bt-grid">
+        <figure class="bt-photo media reveal">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80"
+               alt="Novia con ramo de flores el día de su boda" width="900" height="1100" loading="lazy">
+        </figure>
+        <div class="bt-copy reveal">
+          <p class="eyebrow">Novias Nácar</p>
+          <h2 id="novias-title" class="h2">Tu cuenta atrás de belleza <em>empieza hoy</em></h2>
+          <p>Un plan pensado mes a mes para que llegues al gran día con la piel en su mejor momento, sin estrés de última hora. Pruebas de maquillaje y peinado, tratamientos faciales y corporales y servicio el día de la boda.</p>
+          <ul class="tick-list">
+            <li>Calcula tu plan con la fecha de tu boda</li>
+            <li>Packs para novia y acompañantes</li>
+            <li>Maquillaje y peinado en el centro o a domicilio</li>
+          </ul>
+          <a class="btn btn-dark" href="novias.html">Descubre el plan para novias</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PREGUNTAS FRECUENTES
+         ========================================================= -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <header>
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2 id="faq-title" class="h2">Resolvemos <em>tus dudas</em></h2>
+          <p class="muted">¿No encuentras la tuya? Escríbenos por <a href="https://wa.me/[WHATSAPP]">WhatsApp</a> y te respondemos enseguida.</p>
+        </header>
+        <div class="faq-list">
+          <details>
+            <summary>¿Tengo que saber qué tratamiento necesito antes de reservar?</summary>
+            <p>No. Si dudas, reserva un diagnóstico de piel: analizamos tu tipo de piel y tus objetivos y te proponemos un plan realista, sin compromiso.</p>
+          </details>
+          <details>
+            <summary>¿Cómo funciona la reserva online?</summary>
+            <p>Eliges tratamiento, día y hora, y nos envías la solicitud por WhatsApp con todo ya rellenado. Te confirmamos la cita en cuanto la revisemos.</p>
+          </details>
+          <details>
+            <summary>¿Puedo cambiar o cancelar mi cita?</summary>
+            <p>Sí. Avísanos con al menos [X] horas de antelación por WhatsApp o teléfono y la movemos sin coste.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto tiempo son válidas las tarjetas regalo?</summary>
+            <p>Las tarjetas regalo tienen una validez de [X] meses desde la fecha de compra y se pueden usar en cualquier tratamiento del centro.</p>
+          </details>
+          <details>
+            <summary>¿Los tratamientos son aptos para pieles sensibles?</summary>
+            <p>Sí. Adaptamos productos y técnicas a cada piel. Si tienes alguna alergia, embarazo o tratamiento médico en curso, indícalo al reservar.</p>
+          </details>
+          <details>
+            <summary>¿Qué formas de pago aceptáis?</summary>
+            <p>Aceptamos [FORMAS DE PAGO, p. ej. efectivo, tarjeta y Bizum].</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         UBICACIÓN Y HORARIO
+         ========================================================= -->
+    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <p class="eyebrow">Visítanos</p>
+          <h2 id="contacto-title" class="h2">Nácar, <em>en [CIUDAD]</em></h2>
+          <address>
+            <p><strong>Dirección</strong><br>[DIRECCIÓN]<br>[CÓDIGO POSTAL] [CIUDAD]</p>
+            <p><strong>Teléfono</strong><br><a href="tel:[TELÉFONO]">[TELÉFONO]</a></p>
+            <p><strong>WhatsApp</strong><br><a href="https://wa.me/[WHATSAPP]">Escríbenos</a></p>
+            <p><strong>Email</strong><br><a href="mailto:[EMAIL]">[EMAIL]</a></p>
+          </address>
+          <table class="hours">
+            <caption>Horario</caption>
+            <tbody>
+              <tr><th scope="row">Lunes a viernes</th><td>[HORARIO L-V]</td></tr>
+              <tr><th scope="row">Sábado</th><td>[HORARIO SÁBADO]</td></tr>
+              <tr><th scope="row">Domingo</th><td>Cerrado</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="map-box">
+          <!-- [MAPA]: sustituir por el iframe de Google Maps del centro -->
+          <div class="map-placeholder">
+            <span class="map-pin" aria-hidden="true"></span>
+            <p>[DIRECCIÓN]</p>
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=[DIRECCIÓN]">Cómo llegar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         LLAMADA A LA ACCIÓN FINAL
+         ========================================================= -->
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="container final-inner">
+        <h2 id="cta-title" class="display display--sm">Tu próxima pausa <em>empieza aquí.</em></h2>
+        <div class="btn-row">
+          <a class="btn btn-gold" href="#reserva">Reservar cita</a>
+          <a class="btn btn-ghost-light" href="#regalo">Regalar una tarjeta</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       PIE DE PÁGINA
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand--light" href="index.html">
+          <span class="brand-pearl" aria-hidden="true"></span>
+          <span class="brand-name">Nácar</span>
+          <span class="brand-tag">estética</span>
+        </a>
+        <p>Centro de estética facial, corporal y spa en [CIUDAD].</p>
+      </div>
+      <nav aria-label="Enlaces del pie">
+        <h2 class="footer-title">Explora</h2>
+        <ul>
+          <li><a href="#tratamientos">Tratamientos faciales, corporales y spa</a></li>
+          <li><a href="#reserva">Reserva online</a></li>
+          <li><a href="#regalo">Tarjetas regalo de Navidad</a></li>
+          <li><a href="novias.html">Plan de belleza para novias</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-title">Contacto</h2>
+        <ul>
+          <li>[DIRECCIÓN], [CIUDAD]</li>
+          <li><a href="tel:[TELÉFONO]">[TELÉFONO]</a></li>
+          <li><a href="mailto:[EMAIL]">[EMAIL]</a></li>
+          <li><a href="[URL INSTAGRAM]">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> Nácar Estética. Todos los derechos reservados.</p>
+      <ul class="legal">
+        <li><a href="[URL AVISO LEGAL]">Aviso legal</a></li>
+        <li><a href="[URL PRIVACIDAD]">Privacidad</a></li>
+        <li><a href="[URL COOKIES]">Cookies</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Diálogo de confirmación (reserva / tarjeta / plan novia) -->
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <div class="sheet-box">
+      <button class="sheet-x" type="button" data-close aria-label="Cerrar">×</button>
+      <p class="eyebrow">Casi listo</p>
+      <h2 class="h3" id="sheet-title">Revisa tu mensaje</h2>
+      <pre class="sheet-msg" id="sheet-msg"></pre>
+      <div class="btn-row">
+        <a class="btn btn-dark" id="sheet-wa" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a>
+        <button class="btn btn-outline" type="button" id="sheet-copy">Copiar mensaje</button>
+      </div>
+      <p class="sheet-note">Te confirmaremos la disponibilidad en cuanto lo recibamos.</p>
+    </div>
+  </div>
 </body>
 </html>
